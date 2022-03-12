@@ -458,3 +458,74 @@ cout<<x<<"\t"<<x*x<<"\t"<<x*x*x<<"\n";
 
 return 0;
 }
+
+
+/*
+FileName : T2_30.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+double BMI,height,weight;
+cin>>height>>weight;
+double hei =height*height;
+BMI = weight/hei;
+cout<<BMI;
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+
+
+
+
+/*
+FileName : T2_31.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+double kio,pri,ave,stop,go;
+cout<<"��ֱ�����ǧ�ף����ͼ۸�ÿ���ؿɿ���������ͣ���ѣ�ͨ�з�"<<"\n";
+cin>>kio>>pri>>ave>>stop>>go;
+cout<<"����"<<kio*pri;
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+
+
+
+
+
+
