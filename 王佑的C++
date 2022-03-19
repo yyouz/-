@@ -1,0 +1,1425 @@
+/*
+FileName : T2_16.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int a,b;
+cin>>a>>b;
+cout<<a+b<<"\n"<<a*b<<"\n"<<a-b<<"\n"<<a/b<<endl;
+    return 0;
+}
+
+/*
+FileName : T2_17.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+cout<<"1"<<" < "<<"2"<<" "<<"3"<<" "<<"4"<<"\n";
+cout<<"1"<<" < "<<"2"<<" < "<<"3"<<" < "<<"4"<<"\n";
+int a,b;
+a=1;
+b=2;
+cout<<a<<" "<<b<<" "<<"3"<<" "<<"4";
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T2_18.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just for the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+
+int a,b;
+cin>>a>>b;
+if(a==b){
+
+    cout<<"These numbers are equal."<<endl;
+}
+if(a<b){cout<<b<<"is large"<<endl;}else if(a>b){
+
+    cout<<a<<"is large"<<endl;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T2_19.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just for the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int a,b,c;
+cin>>a>>b>>c;
+cout<<"Input three different integers :"<<a<<" "<<b<<" "<<c<<endl;
+int sum,ave,pro,min,max;
+sum= a+b+c;
+ave= sum/3;
+pro= a*b*c;
+if(a<b){
+    min=a;
+    max=b;
+}else{min=b;max=a;    }
+if(max<c){max=c;}
+if(min>c){c=min;}
+cout<<"Sum is"<<" "<<sum<<"\n"<<"Average is "<<ave<<"\n";
+cout<<"Product is "<<pro<<"\n"<<"Smallest is "<<min<<"\n";
+cout<<"Largest is "<<max;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T2_20.cpp
+Author   : ����
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just for the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+double x = 3.14159;
+int r,d,c,s;
+cin>>r;
+d=2*r;
+c=2*x*r;
+s=x*r*r;
+cout<<"ֱ����"<<d<<"\n"<<"�ܳ���"<<c<<"\n"<<"�����"<<s<<endl;
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T2_21.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just for the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+cout<<"*********"<<"\n"<<"*       *"<<"\n"<<"*       *"<<"\n"<<"*       *"<<"\n"<<"*       *"<<"\n"<<"*       *"<<"\n"<<"*       *"<<"\n"<<"*       *"<<"\n"<<"*********"<<"\n";
+
+cout<<"  ***  "<<"\n"<<" *     *"<<"\n"<<endl;
+for(int i=1;i<=5;i++){
+    cout<<"*       *"<<"\n";
+    }
+cout<<"  ***  "<<"\n"<<endl;
+cout<<"  *  "<<"\n"<<" *** "<<"\n"<<"*****"<<"\n";
+for(int x =1;x<=6;x++){
+    cout<<"  *  "<<"\n";
+}
+cout<<"    *    "<<"\n";
+cout<<"   * *   "<<"\n";
+cout<<"  *   *  "<<"\n";
+cout<<" *     * "<<"\n";
+cout<<"*       *"<<"\n";
+cout<<" *     * "<<"\n";
+cout<<"  *   *  "<<"\n";
+cout<<"   * *   "<<"\n";
+cout<<"    *    "<<"\n";
+
+return 0;
+}
+
+/*
+FileName : T2_22.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+cout<<"¸Ã´úÂëÊä³öÁË"<<"\n"<<endl;
+cout<<"*\n**\n***\n****\n*****"<<endl;
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T2_23.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int a,b,c,d,e,min,max;
+cin>>a>>b>>c>>d>>e;
+if(a<b){min=a;max=b;}else{min=b;max=a;}
+if(max<c){max=c;}
+if(max<d){max=d;}
+if(max<e){max=e;}
+if(min>c){min=c;}
+if(min>d){min=d;}
+if(min>e){min=e;}
+cout<<"���ֵ"<<max<<"\n";
+cout<<"��Сֵ"<<min;
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T2_24.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int a;
+cin>>a;
+if(a%2==0){
+    cout<<"������ż��"<<endl;
+
+}else{   cout<<"����������"<<endl;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T2_25.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int a,b;
+cin>>a>>b;
+if(a%b==0){
+    cout<<"��һ�����ǵڶ������ı���"<<endl;
+}else{cout<<"��һ�������ǵڶ������ı���"<<endl;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+
+}
+
+/*
+FileName : T2_26.cpp
+Author   : 王佑
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just for the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+cout<<"********"<<"\n";
+cout<<" ********"<<"\n";
+cout<<"********"<<"\n";
+cout<<" ********"<<"\n";
+cout<<"********"<<"\n";
+cout<<" ********"<<"\n";
+cout<<"********"<<"\n";
+cout<<" ********"<<"\n";
+cout<<"        "<<endl;
+//the second method
+for(int i=1;i<=4;i++){
+    cout<<"********"<<"\n";
+cout<<" ********"<<"\n";
+}
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T2_27.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+   char a;
+   cin>>a;
+   cout<<'a';
+   return 0;
+}
+
+/*
+FileName : T2_28.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int a,x,b;
+x=10000;
+cin>>b;
+a=b;
+for(int i=1;i<=5;i++){
+b=a/x;
+a=a-b*x;
+x=x/10;
+cout<<b<<"   ";
+
+
+
+}
+
+
+return 0;
+
+}
+
+/*
+FileName : T2_29.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int x=0;
+for(int i=1;i<=11;i++){
+cout<<x<<"\t"<<x*x<<"\t"<<x*x*x<<"\n";
+    x++;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T2_30.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+double BMI,height,weight;
+cin>>height>>weight;
+double hei =height*height;
+BMI = weight/hei;
+cout<<BMI;
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T2_31.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+double kio,pri,ave,stop,go;
+cout<<"��ֱ�����ǧ�ף����ͼ۸�ÿ���ؿɿ���������ͣ���ѣ�ͨ�з�"<<"\n";
+cin>>kio>>pri>>ave>>stop>>go;
+cout<<"����"<<kio*pri;
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+/*
+FileName : T4_15.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+cout<<"����������ë��"<<endl;
+double a,b;
+cout<<"(��ë��Ϊ-1ʱֹͣѭ��)"<<endl;
+cin>>a;
+b=a*0.09;
+while(a!=-1){
+
+    cout<<"���Ĺ���    :"<<a+b;
+    cin>>a;
+    b=a*0.09;
+
+}
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T4_16.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+cout<<"�����빤��ʱ���ÿСʱ����(����-1����)"<<endl;
+double a,b,c;
+cin>>a>>b;
+while(a!=-1){
+if(a<=40){
+a=a*b;
+ cout<<"����Ϊ  :"<<a;
+
+}else{
+c=a-40;
+a=40*b+c*b*1.5;
+
+cout<<"����Ϊ   :"<<a;
+}
+        cin>>a>>b;
+
+}
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T4_17.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int cou,num,max;
+int arr[9];
+cou=0;
+ cin>>num;
+ arr[cou]=num;
+ max=num;
+while(cou<9){
+cout<<"Counter  :" <<cou<<"\n"<<"number     :"<<num<<"\n"<<"Largest   :"<<max;
+  cin>>num;
+    cou++;
+arr[cou]=num;
+
+if(arr[cou]>max){
+
+    max=arr[cou];
+
+}
+
+
+
+}
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T4_18.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int N;
+N=1;
+cout<<"N"<<"\t"<<"10*N"<<"\t"<<"100*N"<<"\t"<<"1000*N"<<endl;
+while(N<=5){
+
+cout<<N<<"\t"<<N*10<<"\t"<<100*N<<"\t"<<1000*N<<"\n";
+N++;
+
+
+
+
+
+}
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T4_19.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main()
+{
+	int arr[10],m;
+	for(int i=0;i<=9;i++)
+	{
+		cin>>arr[i];
+	}
+	for(int j=0;j<=9;j++)
+	{
+		if(arr[j]>arr[0])
+		{
+			m=arr[j];
+			arr[j]=arr[0];
+			arr[0]=m;
+		}
+	}
+	cout<<arr[0]<<"  ";
+	m=arr[1];
+	for(int n=1;n<=9;n++)
+	{
+		if(arr[n]>arr[1])
+		{
+			m=arr[n];
+			arr[n]=arr[1];
+			arr[1]=m;
+		}
+	}
+	cout<<arr[1];
+	return 0;
+ }
+
+/*
+FileName : T4_20.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+cout<<"������ѧ������"<<"\n"<<endl;
+int i;
+cin>>i;
+int x,a,pass,fail;
+pass=0;
+fail=0;
+x=1;
+cout<<"�����뿼�Խ��";
+while(x<=i){
+  cin>>a;
+while(a!=1&&a!=2){
+    cout<<"������������";
+    cin>>a;
+}
+if(a==1){
+
+    pass++;
+}else{
+
+fail++;}
+
+x++;
+}
+
+
+
+cout<<"ͨ��������   :"<<pass<<"\n"<<"δͨ��������  :"<<fail;
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T4_23.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+//The Second is right.
+int x,y;
+x=9;
+y=11;
+if(x<10){
+if(y>10)
+    cout<<"*****"<<endl;
+}
+ else{
+
+
+    cout<<"#####"<<endl;
+    cout<<"$$$$$"<<endl;
+
+
+}
+cout<<"              ";
+
+x=11;
+y=9;
+if(x<10){
+if(y>10)
+    cout<<"*****"<<endl;
+}
+ else{
+
+
+    cout<<"#####"<<endl;
+    cout<<"$$$$$"<<endl;
+
+
+}
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T4_24.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main()
+{
+	int x=5,y=8;
+	//a
+	cout<<"a)"<<endl;
+	if(y==8)
+	{
+		if(x==5)
+		{
+			cout<<"@@@@@"<<endl;
+		}
+
+	}
+
+	else
+	{
+		cout<<"#####"<<endl;
+	}
+	cout<<"$$$$$"<<endl;
+	cout<<"&&&&&"<<endl;
+
+	//b
+	cout<<"b)"<<endl;
+	if(x==5)
+	{
+		if(y==8)
+		{
+			cout<<"@@@@@"<<endl;
+		}
+	}
+	else
+	{
+		cout<<"#####"<<endl;
+		cout<<"$$$$$"<<endl;
+		cout<<"&&&&&"<<endl;
+	}
+	//c
+	cout<<"c)"<<endl;
+	if(x==5)
+	{
+		if(y==8)
+		{
+			cout<<"@@@@@"<<endl;
+		}
+	}
+	else
+	{
+		cout<<"#####"<<endl;
+		cout<<"$$$$$"<<endl;
+	}
+	cout<<"&&&&&"<<endl;
+	//d
+	cout<<"d)"<<endl;
+	x=5,y=7;
+	if(x==5)
+	{
+		if(y==8)
+		{
+			cout<<"@@@@@"<<endl;
+		}
+		else
+		{
+			cout<<"#####"<<endl;
+			cout<<"$$$$$"<<endl;
+			cout<<"&&&&&"<<endl;
+		}
+	}
+
+
+	return 0;
+}
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n;
+	cin>>n;
+	for(int i=1;i<=n;i++)
+	{
+		cout<<"*";
+	}
+	cout<<endl;
+	for(int j=1;j<=n-2;j++)
+	{
+		cout<<"*";
+		for(int s=1;s<=n-2;s++)
+		{
+			cout<<" ";
+		}
+		cout<<"*"<<endl;
+	}
+	for(int i=1;i<=n;i++)
+	{
+		cout<<"*";
+	}
+	cout<<endl;
+	return 0;
+}
+
+/*
+FileName : T4_27.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+char a,b,c,d,e;
+cin>>a>>b>>c>>d>>e;
+if(a==e&&b==d){
+
+    cout<<"�ǻ�����";
+
+}else{
+
+cout<<"���ǻ�����";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T4_27.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<bitset>
+using namespace std;
+int main(){
+
+
+bitset<16> bint;
+    cin >> bint;
+
+      cout << bint.to_ulong() << endl;
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T4_28.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int i,x;
+i=1;
+x=1;
+
+while(i<=8){
+    i++;
+    cout<<"* ";
+}
+ cout<<endl;
+while(x<=8){
+    cout<<" "<<"*";
+    x++;
+
+}cout<<endl;
+i=1;
+x=1;
+while(i<=8){
+    i++;
+    cout<<"* ";
+}
+ cout<<endl;
+while(x<=8){
+    cout<<" "<<"*";
+    x++;
+
+}cout<<endl;
+i=1;
+x=1;
+while(i<=8){
+    i++;
+    cout<<"* ";
+}
+ cout<<endl;
+while(x<=8){
+    cout<<" "<<"*";
+    x++;
+
+}cout<<endl;
+i=1;
+x=1;
+while(i<=8){
+    i++;
+    cout<<"* ";
+}
+ cout<<endl;
+while(x<=8){
+    cout<<" "<<"*";
+    x++;
+
+}
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T4_29.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int a=2;
+while(1){
+ cout<<a<<"    ";
+    a=a*2;
+
+
+}
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T4_30.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+double r,pi,c,s,d;
+cin>>r;
+pi=3.14159;
+d=2*r;
+c=d*pi;
+s=pi*r*r;
+cout<<"ֱ��  ��"<<d<<"\n"<<"�ܳ�  ��"<<c<<"\n"<<"���    ��"<<s;
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T4_32.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+double a,b,c;
+cin>>a>>b>>c;
+if(a+b>c&&a+c>b&&c+b>a){
+cout<<"�������������";
+
+
+
+}else{
+cout<<"�������������";
+
+
+}
+
+
+return 0;
+}
+
+/*
+FileName : T4_33.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int a,b,c;
+cin>>a>>b>>c;
+int A,B,C;
+A=a*a;
+B=b*b;
+C=c*c;
+if(A+B==C||A+C==B||C+B==A){
+cout<<"�������������";
+
+}else{cout<<"�������������";}
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T4_34.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main() {
+    /*  int n,result=1;
+       cout<<"������һ���Ǹ������� ";
+       cin>>n;
+       for(int i=n;i>0;i--)
+       {
+           result*=i;
+       }
+       cout<<"�����Ľ׳�Ϊ�� "<<result<<endl;
+      */
+     // ������ĵڶ��ʣ���ע��ɾ�����ɣ�һ��ֻ��ɾ��һ����
+    /*
+    double n,result1=1,result=1;
+    cout<<"������������ ";
+    cin>>n;
+    for(int i=1;i<=n;i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            result1*=j;
+        }
+        result+=1/result1;
+    }
+    cout<<"e�Ĺ���ֵΪ�� "<<result<<endl;
+    */
+    double n,x,result=1,result1=1,result2=1;
+    cout<<"������x��ֵ�� ";
+    cin>>x;
+    cout<<"������������ ";
+    cin>>n;
+    for(int i=1; i<=n; i++) {
+        for(int j=1; j<=i; j++) {
+            result2=pow(x,i);
+            result1*=i;
+        }
+        result+=result2/result1;
+    }
+    cout<<"e^x�Ĺ���ֵΪ�� "<<result<<endl;
+
+    return 0;
+}
+
+/*
+FileName : T4_35.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+
+using namespace std;
+
+//a):
+unsigned int studentCounter={0};
+//b):
+double initialBalance={1000.0};
+//c):��ʼ��
+class Account
+{
+   public:
+      unsigned int accountNumber;
+      string firstName;
+      string lastName;
+      double  balance;
+      // ��Ա��������
+     // double get(void);
+      void set( double len, double bre, double hei );
+};
+// ��Ա��������(��Ҫ���Ҽ��ˣ�)�������ʾ������
+
+void Box::set( unsigned int accountnumber, string firstname, string lastname, double  balance)
+{
+  accountNumber = accountnumber;
+firstName = firstname;
+lastName = lastname;
+balance = balance;
+
+}
+
+/*
+FileName : T4_36.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+
+using namespace std;
+int main(){
+    int num0,q,w,e,r;
+    cin>>num0;
+    q=num0/1000;
+    w=num0/100-10*q;
+    e=num0/10-100*q-10*w;
+    r=num0%10;
+     q=(q+3)%10;
+    w=(w+3)%10;
+    e=(e+3)%10;
+    r=(r+3)%10;
+     cout<<e<<r<<q<<w<<endl;
+}//As  same as the last
+/*
+#include <iostream>
+
+using namespace std;
+int main(){
+    int num0,q,w,e,r;
+    cin>>num0;
+    q=num0/1000;
+    w=num0/100-10*q;
+    e=num0/10-100*q-10*w;
+    r=num0%10;
+    q=(q+7)%10;
+    w=(w+7)%10;
+    e=(e+7)%10;
+    r=(r+7)%10;
+    cout<<e<<r<<q<<w<<endl;
+    }
+*/
+
+/*
+FileName : T4_37.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main(){
+    double uprate,people_i,people_pro,people_up;
+    long long int people_i0,people_up0;
+    uprate=1.009;
+    people_i=76;
+    cout<<"���\t\t"<<"Ԥ���˿�\t"<<"Ԥ���˿�������\t"<<endl;
+    for(int i=1;i<=75;i++)
+    {people_pro=people_i;
+        people_i=people_i*uprate;
+        people_up=(people_i-people_pro);
+        people_i0=people_i*100000000;
+        people_up0=people_up*100000000;
+cout<<"��"<<i<<"��:  \t"<<people_i0<<"\t"<<people_up0<<endl;
+
+    }
+}
+
+/*
+FileName : T4_13.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int a,b,MPG;
+cout<<"��ֱ�����Ӣ������������(����-1Ӣ�����뿪)"<<endl;
+cin>>a>>b;
+
+while(a!=-1){
+double MPG =(double)a/b;
+cout<<"��ʻ��Ӣ����������-1�뿪��:"<<a<<"\n"<<"�ķѵļ�����:"<<b<<"\n"<<"ƽ��ÿ������ʻӢ���� :"<<MPG;
+
+cin>>a>>b;
+
+}
+
+
+
+
+
+return 0;
+
+}
+
+/*
+FileName : T4_14.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+cout<<"��ֱ��ṩ������Ϣ : �˺ţ��³�Ƿ����¹����ܽ����´�������������ö��"<<endl;
+double b,c,d,e,f;
+int a;
+cin>>a>>b>>c>>d>>e;
+f=b+c-d;
+cout<<"�˺�   :"<<a<<"\n"<<"�³�Ƿ��     :"<<b<<"\n"<<"������   :"<<c<<"\n"<<"������      :"<<d<<"\n"<<"���ö��      :"<<e<<"\n"<<"�µ�Ƿ��   :"<<f<<"\n";
+if(f>e){
+
+    cout<<"Credit Limit Exceed"<<endl;
+}
+while(a!=-1){
+cin>>a>>b>>c>>d>>e;
+f=b+c-d;
+cout<<"�˺�   :"<<a<<"\n"<<"�³�Ƿ��     :"<<b<<"\n"<<"������   :"<<c<<"\n"<<"������      :"<<d<<"\n"<<"���ö��      :"<<e<<"\n"<<"�µ�Ƿ��   :"<<f<<"\n";
+  if(f>e){
+
+    cout<<"Credit Limit Exceed"<<endl;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+return 0;
+}
+
