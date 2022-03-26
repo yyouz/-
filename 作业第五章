@@ -1,0 +1,948 @@
+/*
+FileName : T5_05.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int a,x,b,d;
+cin>>a;
+d=0;
+for(x=1;x<=a;x++){
+    cin>>b;
+d=d+b;
+
+
+}
+cout<<d;
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_06.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+ int a,b,c,d;
+ cout<<"please input the count of number,the last is the 9999";
+ c=0;
+ d=9999;
+ cin>>a;
+for(int n=1;n<=(a-1);n++){
+    cin>>b;
+    c=c+b;
+
+
+
+
+}
+c=c+d;
+c=c/a;
+
+cout<<c;
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_08.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int n,x,min,b;
+cout<<"how many numbers do you want to input?"<<endl;
+cin>>n;
+int arr[n];
+b=0;
+for(int a=1;a<=n;a++){
+  cin>>arr[b];
+    b++;
+
+}
+min=arr[0];
+for(int c=0;c<n;c++){
+    if(min>arr[c+1]){
+        min=arr[c+1];
+
+    }
+
+
+}
+
+
+cout<<min;
+
+return 0;
+}
+
+/*
+FileName : T5_09.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+    int a=1;
+for(int x=1;x<=15;x++){
+ if(a%2!=0){
+    cout<<a<<"*";
+
+ }
+
+    a++;
+
+
+}
+int b=1*3*5*7*9*11*13*15;
+cout<<"="<<b;
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_10.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+    int a=1;
+    int b=a;
+    int c=2;
+for(int x=1;x<=5;x++){
+  while(a>=1){
+    b=b*a;
+ a--;
+  }
+  cout<<b<<endl;
+  a=a+c;
+c++;
+b=1;
+}
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_11.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+double x=0.05;
+double a,b;
+int n;
+cout<<"how much do you want to storage ?";
+cin>>a;
+b=a;
+cout<<"how many years do you want to storage?";
+cin>>n;
+for(int i=1;i<=6;i++){
+  for(int c=1;c<=n;c++){
+        a=a*(1+x);
+
+  }
+cout<<a;
+cout<<endl;
+x=x+0.01;
+a=b;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_12.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+    int b=1;
+for(int n=1;n<=10;n++){
+    for(int i=1;i<=b;i++)
+{cout<<"*";
+}
+b++;
+cout<<endl;
+}
+cout<<endl;
+int a=1;
+for(int c=1;c<=10;c++){
+    for(int d=10;d>=a;d--){
+        cout<<"*";
+    }
+    a++;
+    cout<<endl;
+}cout<<endl;
+int h=1;
+int j=1;
+for(int e=1;e<=10;e++){
+    for(int f=10;f>=j;f--){
+        cout<<"*";
+    }
+    j++;
+    cout<<endl;
+for(int g=1;g<=h;g++){
+    cout<<" ";
+}
+h++;
+}
+cout<<endl;
+int m=9;
+int o=1;
+for(int k=1;k<=10;k++){
+ for(int l=1;l<=m;l++){
+    cout<<" ";
+ }
+for(int p=1;p<=o;p++){
+    cout<<"*";
+}
+cout<<endl;
+    o++;
+    m--;
+
+
+}
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_13.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+for(int x=1;x<=5;x++){
+    cin>>n;
+    if(n>1&&n<30){
+    for(int i=1;i<=n;i++){
+    cout<<"*";
+
+
+}}else{cout<<"ERROR!";}
+
+    cout<<endl;
+
+
+
+
+
+}
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_14.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int num;
+double n;
+double x;
+double all;
+cout<<"Please input the count and the Sales"<<endl;
+cin>>num>>n;
+switch(num){
+case 1 :
+  x=2.98;
+  break;
+case 2 :
+  x=4.50;
+  break;
+case 3 :
+    x=9.98;
+    break;
+case 4 :
+    x=4.49;
+    break;
+case 5 :
+    x=6.87;
+    break;
+default :
+    cout<<"ERROR!";
+break;
+}
+all=x*n;
+cout<<"The total sales :"<<all;
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_15.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+char n;
+cout<<"Please input your grades(if you want to leave ,please input the G)"<<endl;
+int a,b,c,d,e,f;
+a=b=c=d=e=f=0;
+for(int i=1;i<=99999;i++){
+        cin>>n;
+if(n==71){
+    break;
+}
+switch(n){
+ case 65 :
+     a++;
+break;
+ case 66 :
+    b++;
+    break;
+ case 67 :
+    c++;
+    break;
+ case 68 :
+    d++;
+    break;
+ case 69 :
+    e++;
+break;
+ default :
+    f++;
+break;
+}}
+cout<<"THE average grades under the line"<<endl;
+cout<<"A1 :"<<a*4<<endl<<"B1 :"<<b*3<<endl<<"C1 :"<<c*2<<endl<<"D1 :"<<d*1<<endl<<"E1 : 0"<<endl<<"F1  : 0";
+
+
+return 0;
+}
+
+/*
+FileName : T5_16.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+	int a,p,n;
+	for(int r=5;r<=10;r++)
+	{
+		cout<<"r="<<r<<"%"<<endl;
+		cout<<"Year\t"<<"Amount on deposit"<<endl;
+		for(int n=1;n<=10;n++)
+		{
+			cout<<n<<"\t\t"<<pow(100+r,n)/pow(100,n)*1000<<endl;
+		}
+		cout<<endl;
+	}
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_18.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+using namespace std;
+int bin(int a)
+{
+	int arr[9];
+	for(int i=0;i<9;i++)
+	{
+		arr[i]=a%2;
+		a=a/2;
+	}
+	for(int i=8;i>=0;i--)
+	{
+		cout<<arr[i];
+	}
+
+}
+
+int main()
+{
+	cout<<"dec\tbin\t\toct\thex"<<endl;
+
+	for(int i=1;i<=256;i++)
+	{
+		cout<<dec<<i<<"\t";
+		bin(i);
+		cout<<"\t";
+		cout<<oct<<i<<"\t";
+		cout<<hex<<i<<"\t"<<endl;
+	}
+	return 0;
+}
+
+
+/*
+FileName : T5_19.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+cout<<"the fist of pi"<<endl;
+cout<<"pi = 4"<<endl;
+cout<<"the two project of pi"<<endl;
+cout<<"pi = 2.6666666666666666........"<<endl;
+cout<<"the thousand projects of pi"<<endl;
+double s;
+double a=1;
+s=4;
+for(int i=1;i<=499;i++){
+a++;
+s=s-(4/a);
+ a=a+2;
+s=s+(4/a);
+
+}
+s=s-(4/a);
+cout<<"pi ="<<s<<endl;
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_18.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int side1,side2,hypotenuse;
+for(side1=1;side1<=500;side1++){
+    for(side2=side1;side2<=500;side2++){
+      for(hypotenuse=side2;hypotenuse<=500;hypotenuse++){
+        if(side1*side1+side2*side2==hypotenuse*hypotenuse){
+            cout<<"{"<<side1<<","<<side2<<","<<hypotenuse<<"}"<<" ";
+
+        }
+      }
+
+    }
+}
+cout<<"these are all the situation!"<<endl;
+
+
+return 0;
+}
+
+/*
+FileName : T5_21.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+    cout<<"Please input the number to work out the salary"<<endl;
+int n;
+    cin>>n;
+switch(n){
+case 1 :
+    cout<<"the manager's salary is x"<<endl;
+    break;
+case 2 :
+cout<<"the work hours are n"<<endl;
+        cout<<"if the n<=40,the salary is xn"<<endl<<"if the n>40,the salary is the x*n+(n-40)*1.5*x"<<endl;
+break;
+case 3 :
+    cout<<"the sales money is h"<<endl;
+cout<<"the salary is 250+h*0.057"<<endl;
+break;
+case 4 :
+cout<<"if the sales is n,the single piece amount is x"<<endl;
+cout<<"the salary is n*x"<<endl;
+break;
+default :
+    cout<<"ERROR!"<<endl;
+    break;
+}
+
+
+return 0;
+}
+
+/*
+FileName : T5_22.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+    int x,y;
+    cout<<"!(x<5)&&!(y>=7)==!((x<5)||(y>=7))"<<endl<<"!(a==b)||!(g!=5)==!((a==b)&&(g!=5))"<<endl;
+        cout<<"!((x<=8)&&(y>4))==!(x<=8)||!(y>4)"<<endl<<"!((i>4)||(j<=6))==!(i>4)&&!(j<=6)"<<endl;
+
+cout<<"the examples under the line"<<endl<<"please input the x,y"<<endl;
+cin>>x>>y;
+if(!(x<5)&&!(y>=7)){
+    cout<<"a";
+}else{cout<<"b";}
+cout<<endl;
+cout<<"the equal project"<<endl;
+if(!((x<5)||(y>=7))){
+        cout<<"a";}else{cout<<"b";}
+cout<<"the next project"<<endl;
+cout<<"input a ,b,g"<<endl;
+int a,b,g;
+cin>>a>>b>>g;
+if(!(a==b)||!(g!=5)){cout<<"a";}else{cout<<"g";}
+cout<<endl<<"the equal project"<<endl;
+if(!((a==b)&&(g!=5))){cout<<"a";}else{cout<<"g";}
+cout<<endl<<"the next project"<<endl;
+if(!((x<=8)&&(y>4))){cout<<"a";}else{cout<<"b";}
+cout<<endl<<"the equal project"<<endl;
+if(!(x<=8)||!(y>4)){cout<<"a";}else{cout<<"b";}
+cout<<endl<<"the next project ;please input the i,j"<<endl;
+int i,j;
+cin>>i>>j;
+if(!((i>4)||(j<=6))){cout<<"a";}else{cout<<"b";}
+cout<<endl<<"the equal project"<<endl;
+if(!(i>4)&&!(j<=6)){cout<<"a";}else{cout<<"b";}
+return 0;
+}
+
+/*
+FileName : T5_23.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+    int a=1;
+    int b=1;
+for(int i=1;i<=5;i++){
+for(int x=4;x>=a;x--){
+    cout<<" ";
+}
+for(int j=1;j<=b;j++){
+    cout<<"*";
+}
+b+=2;
+a++;
+cout<<endl;
+}
+int c=1;
+int d=1;
+for(int h=1;h<=4;h++){
+ for(int s=1;s<=c;s++){
+    cout<<" ";
+ }
+ for(int t=7;t>=d;t--){
+    cout<<"*";
+ }
+  c++;
+  d=d+2;
+  cout<<endl;
+}
+return 0;
+}
+
+/*
+FileName : T5_24.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+	int n;
+	cout<<"Enter n that is odd number pls"<<endl;
+	cin>>n;
+	for(int i=1;i<=(n+1)/2;i++)
+	{
+		for(int j=1;j<=(n+1)/2-i;j++)
+		{
+			cout<<" ";
+		}
+		for(int k=1;k<=2*i-1;k++)
+		{
+			cout<<"*";
+		}
+		cout<<endl;
+	}
+	for(int i=1;i<=(n-1)/2;i++)
+	{
+		for(int j=1;j<=i;j++)
+		{
+			cout<<" ";
+		}
+		for(int k=n-2*i;k>=1;k--)
+		{
+			cout<<"*";
+		}
+		cout<<endl;
+	}
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_25.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+unsigned int count;
+for(count=1;count<=10;++count){
+if(5==count){
+    count=count+10;}
+if(count<5){
+cout<<count<<" ";}
+}
+cout<<"\nBroke out of loop at count = "<<(count-11)<<endl;
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_27.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+for(unsigned int count =1;count<=10;++count){
+if(5!=count){
+    cout<<count<<" ";
+}
+
+
+}
+cout<<"\nUsed data construct to skip printing 5"<<endl;
+
+
+
+return 0;
+}
+
+	/*
+FileName : T5_28.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+	for(int i=1;i<=12;i++)
+	{
+		switch(i)
+		{
+			case 1:
+				cout<<"On the first day of Christmas, ";
+				break;
+			case 2:
+				cout<<"On the second day of Christmas, ";
+				break;
+			case 3:
+				cout<<"On the third day of Christmas, ";
+				break;
+			case 4:
+				cout<<"On the fourth day of Christmas, ";
+				break;
+			case 5:
+				cout<<"On the fifth day of Christmas, ";
+				break;
+			case 6:
+				cout<<"On the sixth day of Christmas, ";
+				break;
+			case 7:
+				cout<<"On the seventh day of Christmas, ";
+				break;
+			case 8:
+				cout<<"On the eighth day of Christmas, ";
+				break;
+			case 9:
+				cout<<"On the ninth day of Christmas, ";
+				break;
+			case 10:
+				cout<<"On the tenth day of Christmas, ";
+				break;
+			case 11:
+				cout<<"On the eleventh day of Christmas, ";
+				break;
+			case 12:
+				cout<<"On the twelfth day of Christmas, ";
+				break;
+		}
+		switch(i)
+		{
+			case 1:
+				cout<<"my true love sent to me: A partridge in a pear tree."<<endl;
+				break;
+			case 2:
+				cout<<"my true love sent to me: Two turtle doves, And a partridge in a pear tree."<<endl;
+				break;
+			case 3:
+				cout<<"my true love sent to me: Three French hens, Two turtle doves, And a partridge in a pear tree."<<endl;
+				break;
+			case 4:
+				cout<<"my true love sent to me: Four calling birds, Three French hens, Two turtle doves, And a partridge in a pear tree."<<endl;
+				break;
+			case 5:
+				cout<<"my true love sent to me: Five golden rings; Four calling birds, Three French hens, Two turtle doves, And a partridge in a pear tree."<<endl;
+				break;
+			case 6:
+				cout<<"my true love sent to me: Six geese a-laying, Five golden rings; Four calling birds, Three French hens, Two turtle doves, And a partridge in a pear tree."<<endl;
+				break;
+			case 7:
+				cout<<"my true love sent to me: Seven swans a-swimming, Six geese a-laying, Five golden rings; Four calling birds, Three French hens, Two turtle doves, And a partridge in a pear tree."<<endl;
+				break;
+			case 8:
+				cout<<"my true love sent to me: Eight maids a-milking, Seven swans a-swimming, Six geese a-laying, Five golden rings; Four calling birds, Three French hens, Two turtle doves, And a partridge in a pear tree."<<endl;
+				break;
+			case 9:
+				cout<<"my true love sent to me: Nine ladies dancing, Eight maids a-milking, Seven swans a-swimming, Six geese a-laying, Five golden rings; Four calling birds, Three French hens, Two turtle doves, And a partridge in a pear tree."<<endl;
+				break;
+			case 10:
+				cout<<"my true love sent to me: Ten lords a-leaping, Nine ladies dancing, Eight maids a-milking, Seven swans a-swimming, Six geese a-laying, Five golden rings; Four calling birds, Three French hens, Two turtle doves, And a partridge in a pear tree."<<endl;
+				break;
+			case 11:
+				cout<<"my true love sent to me: Eleven pipers piping, Ten lords a-leaping, Nine ladies dancing, Eight maids a-milking, Seven swans a-swimming, Six geese a-laying, Five golden rings; Four calling birds, Three French hens, Two turtle doves,And a partridge in a pear tree."<<endl;
+				break;
+			case 12:
+				cout<<"my true love sent to me: Twelve drummers drumming, Eleven pipers piping, Ten lords a-leaping, Nine ladies dancing, Eight maids a-milking, Seven swans a-swimming, Six geese a-laying, Five golden rings, Four calling birds, Three French hens, Two turtle doves, And a partridge in a pear tree!"<<endl;
+				break;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T5_29.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Mar 6th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+double a,b;
+a=24;
+b=0.05;
+
+for( int i=1;i<=6;i++){
+cout<<"When the interest rate is :"<<b<<endl;
+    for(int j=1;j<=387;j++){
+        a=a*(1+b);
+
+    }
+
+cout<<a<<endl;
+    b=b+0.01;
+    a=24;
+}
+
+
+
+
+
+
+
+return 0;
+}
