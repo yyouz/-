@@ -1,0 +1,1931 @@
+/*
+FileName : T6_46.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+double x;
+cin>>x;
+cout<<"ceil="<<ceil(x)<<"  cos="<<cos(x)<<"  exp="<<exp(x)<<endl;
+cout<<"floor="<<floor(x)<<"  sqrt="<<sqrt(x);
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_47.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+//a;no main functions!
+float cube(float);
+int main(){
+float number;
+cin>>number;
+cout<<cube(number);
+return 0;
+}
+float cube(float number){
+return number*number*number;
+}
+//b;no srand(time(0))!;
+int randomNumber =srand(time(0));
+float y =123.45678;
+int x;
+x=y;
+cout<<static_cast<float>(x)<<endl;
+//c;number=0;
+double square(double number){
+double number;
+cin>>number;
+return number*number;
+}
+//e;you have two integers!
+int sum(int n,int x){
+if(0==x)
+return 0;
+else
+return n+sum(n,x-1);
+
+}
+
+/*
+FileName : T6_48.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int num1,num2;
+    srand(time(NULL));
+    rand();
+    num1 = rand() % 6 + 1;
+    num2 = rand() % 6 + 1;
+    printf("���1�ĵ����ǣ�%d\n",num1);
+    printf("���2�ĵ����ǣ�%d\n",num2);
+
+    if(num1 == num2)
+    {
+        printf("ƽ��");
+    }
+    else if(num1 > num2)
+    {
+        printf("���1Ӯ��");
+    }
+    else if(num1 < num2)
+    {
+        printf("���2Ӯ��");
+    }
+    return 0;
+}
+
+/*
+FileName : T6_49.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+const double pi=3.1415926;
+double circleArea(double r){
+double square=r*r*pi;
+return square;
+}
+int main(){
+double r,square;
+cin>>r;
+cout<<circleArea(r);
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_50.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+
+#include <stdio.h>
+
+void swap(int a, int b){
+    printf("swap enter\n");
+    printf("a = %d, ptr = %p\n", a, &a);
+    printf("b = %d, ptr = %p\n", a, &b);
+
+    int tmp = b;
+    b = a;
+    a = tmp;
+
+    printf("a = %d, ptr = %p\n", a, &a);
+    printf("b = %d, ptr = %p\n", b, &b);
+    printf("swap leave\n");
+}
+
+void swap(int &a, int &b){
+    printf("swap enter\n");
+    printf("a = %d, ptr = %p\n", a, &a);
+    printf("b = %d, ptr = %p\n", a, &b);
+
+    int tmp = b;
+    b = a;
+    a = tmp;
+
+    printf("a = %d, ptr = %p\n", a, &a);
+    printf("b = %d, ptr = %p\n", b, &b);
+    printf("swap leave\n");
+}
+int main() {
+    int x = 1;
+    int y = 2;
+    printf("x = %d, ptr = %p\n", x, &x);
+    printf("y = %d, ptr = %p\n", y, &y);
+
+    swap(x, y);
+
+    printf("x = %d, ptr = %p\n", x, &x);
+    printf("y = %d, ptr = %p\n", y, &y);
+
+ x = 1;
+ y = 2;
+    printf("x = %d, ptr = %p\n", x, &x);
+    printf("y = %d, ptr = %p\n", y, &y);
+
+    swap(x, y);
+
+    printf("x = %d, ptr = %p\n", x, &x);
+    printf("y = %d, ptr = %p\n", y, &y);
+
+
+    return 0;
+}
+
+/*
+FileName : T6_51.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+
+
+cout<<"���ֲ�������ȫ�ֱ���ͬ��ʱ���ھֲ����������������з���ȫ�ֱ���";
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_52.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+void minimum(int a,int b,char c,char d,double e,double f){
+int min1;
+char min2;
+double min3;
+if(a>b){min1=b;}else{min1=a;}
+if(c>d){min2=d;}else{min2=a;}
+if(e>f){min3=f;}else{min3=e;}
+cout<<"int"<<min1<<" "<<"char"<<min2<<" "<<"double"<<min3;
+}
+int main(){
+    int a,b;
+    char c,d;
+    double e,f;
+cin>>a>>b>>c>>d>>e>>f;
+minimum(a,b,c,d,e,f);
+
+return 0;
+}
+
+/*
+FileName : T6_53.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+void maximum(int a,int b,char c,char d,double e,double f){
+int max1;
+char max2;
+double max3;
+if(a<b){max1=b;}else{max1=a;}
+if(c<d){max2=d;}else{max2=a;}
+if(e<f){max3=f;}else{max3=e;}
+cout<<"int"<<max1<<" "<<"char"<<max2<<" "<<"double"<<max3;
+}
+int main(){
+    int a,b;
+    char c,d;
+    double e,f;
+cin>>a>>b>>c>>d>>e>>f;
+maximum(a,b,c,d,e,f);
+
+return 0;
+}
+
+/*
+FileName : T6_55.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <stdio.h>
+#include <stdlib.h>     //srand()/rand()
+#include <time.h>       //time()
+
+int main()
+{
+    char choice = '\0'; //�˵�ѡ��
+    int ret = 0;
+    //��ϵͳ������ʼ�����������
+    srand((unsigned)time(NULL));
+    while(1)
+    {
+        /* 1.�˵���ӡ */
+        system("cls");  //����--Windowsϵͳ
+        printf("======================\n");
+        printf("|     ��������Ϸ     |\n");
+        printf("|  1:������  0:�˳�  |\n");
+        if(ret)
+            printf("|     ���ֵ���:%d     |\n", ret);
+        printf("======================\n");
+
+        /* 2.����ѡ�� */
+        printf("��ѡ��>>>>>>>\n");
+        scanf(" %c", &choice);    //����ѡ��
+                                  //" %c" ���Գ�ǰ��Ŀո�ͻس�
+        while(getchar() != '\n'); //�Ե���choice�������ַ�
+        ret = 0;                  //��ʼ������
+        switch(choice)
+        {
+            case '0':
+            	printf("Goodbye!\n");
+    			return 0;   //�˳�
+            //������(����1 ~ 6 �����)
+            case '1':
+             	ret = rand() % 6 + 1;
+                break;
+            default: printf("��Чѡ��!\n");
+        }
+    }
+    return 0;
+}
+
+/*
+FileName : T6_56.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+enum GameResult{WIN,LOSE,TIE,CANCEL};
+
+int main(){
+	GameResult result;
+	enum GameResult omit=CANCEL;
+	// �������ַ�ʽ���ǿ��Եġ������߲�����enum�ؼ��ֶ����ԡ�
+	for(int count=WIN;count<=CANCEL;count++){
+		// �����ǲ��޶��������ö�����͡����Կ�ֱ֪�ӱȽϣ���ʽ����ת������
+		// ����Ҫ��ʽ����ת��
+		result = static_cast<GameResult>(count);
+		//����ֱ����һ��������ö��ֵ��ֵ����Ҫ����ǿ������ת����
+		if (result==omit){
+			cout<<"The game was cancelled"<<endl;
+		}
+		else{
+			cout<<"The game was played ";
+			if(result==WIN){
+				cout<<"and we won!";
+			}
+			if(result==LOSE){
+				cout<<"and we lost...";
+			}
+			cout<<endl;
+		}
+	}
+	return 0;
+}
+
+/*
+FileName : T6_57.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<ctime>
+#include<stdlib.h>
+using namespace std;
+void CAI(int n){
+int arr[9999];
+int i=0;
+srand(time(0));
+for(int j=1;j<=2;j++){
+    arr[i]=rand()%9+1;
+
+    i++;
+}
+while(1){
+        cin>>n;
+if(n==arr[0]*arr[1]){
+
+    cout<<"Very good!"<<endl;
+    break;
+}else{cout<<"No.Please try again"<<endl;}
+
+}
+}
+int main(){
+int n;
+CAI(n);
+
+return 0;
+}
+
+/*
+FileName : T6_58.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<ctime>
+#include<stdlib.h>
+using namespace std;
+void CAI(int n){
+int arr[9999];
+int num=0;
+int i=0;
+srand(time(0));
+for(int j=1;j<=2;j++){
+    arr[i]=rand()%9+1;
+
+    i++;
+}
+cout<<"how much is"<<arr[0]<<" times "<<arr[1]<<endl;
+while(1){
+        cin>>n;
+if(n==arr[0]*arr[1]){
+
+    cout<<"Very good!"<<endl;
+    break;
+}else if(n!=arr[0]*arr[1]&&num==0){cout<<"No.Please try again"<<endl;num++;}
+else if(n!=arr[0]*arr[1]&&num==1){cout<<"Don't give up!"<<endl;num++;}
+else if(n!=arr[0]*arr[1]&&num==2){cout<<"Keep trying!"<<endl;num--;}
+}
+}
+int main(){
+int n;
+CAI(n);
+
+return 0;
+}
+
+/*
+  FileName:T6_59.cpp
+  Author:WangYou
+  E-mail:2112080137@qq.com
+  Time:April 11th,2022
+  Function : just homework
+*/
+
+
+
+#include <iostream>
+#include<time.h>
+using namespace std;
+int sum;
+int cf()
+{
+    srand(time(0));
+    int a=rand()%9+1;
+    int b=rand()%9+1;
+    sum=a*b;
+    cout<<"How much is "<<a<<" times "<<b<<": ";
+}
+int main()
+{
+    while(1)
+    {A:double sum1=0;
+    double sum2=0;
+    while(1){
+    cf();
+    int n;
+    cin>>n;
+    while(n!=sum)
+    {
+        sum1++;
+        if((sum1+sum2)==10)
+        {
+            if(sum2/10<0.75)
+            {cout<<"Please ask your teacher for extra help."<<endl;goto A;}
+            else
+                {cout<<"Congratulations,you are ready to go to the next level!"<<endl;goto A;}
+
+        }
+        int q=rand()%4+1;
+            switch(q){
+case 1:
+    cout<<"No.Please  try again!"<<endl; break;
+case 2:
+    cout<<"Wrong .Try once more."<<endl; break;
+case 3:
+    cout<<"Do not give up!"<<endl; break;
+case 4:
+    cout<<"No.Keep trying."<<endl; break;}
+    cin>>n;
+    }
+    if(n==sum){
+            sum2++;
+            if((sum1+sum2)==10)
+        {
+            if(sum2/10<0.75)
+            {cout<<"Please ask your teacher for extra help."<<endl;goto A;}
+            else
+                {cout<<"Congratulations,you are ready to go to the next level!"<<endl;goto A;}
+
+        }
+            int p=rand()%4+1;
+    switch(p){
+case 1:
+    cout<<"Very good!"<<endl;
+    break;
+case 2:
+    cout<<"Excellent!"<<endl; break;
+case 3:
+    cout<<"Nice work!"<<endl; break;
+case 4:
+    cout<<"Keep up the good work"<<endl; break;
+    }}break;}}
+    return 0;
+}
+
+/*
+  FileName:T6_60.cpp
+  Author:Wangyou
+  E-mail:2112080137@qq.com
+  Time:April 7th,2022
+  Function : just homework
+*/
+
+#include <iostream>
+#include<time.h>
+using namespace std;
+int sum;
+int cf1()
+{
+    srand(time(0));
+    int a=rand()%9+1;
+    int b=rand()%9+1;
+    sum=a*b;
+    cout<<"How much is "<<a<<" times "<<b<<": ";
+}
+int cf2()
+{
+    srand(time(0));
+    int a=rand()%99+1;
+    int b=rand()%99+1;
+    sum=a*b;
+    cout<<"How much is "<<a<<" times "<<b<<": ";
+}
+int main()
+{
+    while(1)
+    {A:double sum1=0;
+    double sum2=0;
+    while(1){
+    int nandu;
+    cout<<"Please come a nandu"<<": ";
+    cin>>nandu;
+    if(nandu==1)
+    cf1();
+    else
+        cf2();
+    int n;
+    cin>>n;
+    while(n!=sum)
+    {
+        sum1++;
+        if((sum1+sum2)==10)
+        {
+            if(sum2/10<0.75)
+            {cout<<"Please ask your teacher for extra help."<<endl;goto A;}
+            else
+                {cout<<"Congratulations,you are ready to go to the next level!"<<endl;goto A;}
+
+        }
+        int q=rand()%4+1;
+            switch(q){
+case 1:
+    cout<<"No.Please  try again!"<<endl; break;
+case 2:
+    cout<<"Wrong .Try once more."<<endl; break;
+case 3:
+    cout<<"Do not give up!"<<endl; break;
+case 4:
+    cout<<"No.Keep trying."<<endl; break;}
+    cin>>n;
+    }
+    if(n==sum){
+            sum2++;
+            if((sum1+sum2)==10)
+        {
+            if(sum2/10<0.75)
+            {cout<<"Please ask your teacher for extra help."<<endl;goto A;}
+            else
+                {cout<<"Congratulations,you are ready to go to the next level!"<<endl;goto A;}
+
+        }
+            int p=rand()%4+1;
+    switch(p){
+case 1:
+    cout<<"Very good!"<<endl;
+    break;
+case 2:
+    cout<<"Excellent!"<<endl; break;
+case 3:
+    cout<<"Nice work!"<<endl; break;
+case 4:
+    cout<<"Keep up the good work"<<endl; break;
+    }}break;}}
+    return 0;
+}
+
+/*
+  FileName:T6_61.cpp
+  Author:Wangyou
+  E-mail:2112080137@qq.com
+  Time:April 11th,2022
+  Function : just homework
+*/
+
+
+
+
+#include <iostream>
+#include<time.h>
+using namespace std;
+int sum;
+void cf1(int n)
+{
+    srand(time(0));
+    int a=rand()%9+1;
+    int b=rand()%9+1;
+    int c=rand()%9+1;
+    int d=rand()%9+1;
+    if(n==3)
+    {sum=a*b;
+    cout<<"How much is "<<a<<" times "<<b<<": ";return;}
+    if(n==1)
+        {sum=a+b;cout<<"How much is "<<a<<" plus "<<b<<": ";return;}
+    if(n==2)
+    {
+        sum=a-b;cout<<"How much is "<<a<<" minus "<<b<<": ";return;
+    }
+    if(n==4)
+    {
+        sum=a/b;cout<<"How much is "<<a<<" division "<<b<<": ";return;
+    }
+    if(n==5)
+    {
+        sum=a*b+a-a/b;
+        cout<<"How much is "<<a<<" times "<<b<<" plus "<<a<<" minus "<<a/b;return;
+    }
+    cout<<"How much is "<<a<<" times "<<b<<": ";
+}
+void cf2(int n)
+{
+    srand(time(0));
+    int a=rand()%99+1;
+    int b=rand()%99+1;
+    int c=rand()%99+1;
+    int d=rand()%99+1;
+    if(n==3)
+    {sum=a*b;
+    cout<<"How much is "<<a<<" times "<<b<<": ";return;}
+    if(n==1)
+        {sum=a+b;cout<<"How much is "<<a<<" plus "<<b<<": ";return;}
+    if(n==2)
+    {
+        sum=a-b;cout<<"How much is "<<a<<" minus "<<b<<": ";return;
+    }
+    if(n==4)
+    {
+        sum=a/b;cout<<"How much is "<<a<<" division "<<b<<": ";return;
+    }
+    if(n==5)
+    {
+        sum=a*b+a-a/b;
+        cout<<"How much is "<<a<<" times "<<b<<" plus "<<a<<" minus "<<a/b;return;
+    }
+    cout<<"How much is "<<a<<" times "<<b<<": ";
+}
+int main()
+{
+    while(1)
+    {A:double sum1=0;
+    double sum2=0;
+    while(1){
+    int nandu,yusuan;
+    cout<<"Please come a nandu"<<": ";
+    cin>>nandu;
+    cout<<"please come a yunsuan"<<": ";
+    cin>>yusuan;
+    if(nandu==1)
+    cf1(yusuan);
+    else
+        cf2(yusuan);
+    int n;
+    cin>>n;
+    while(n!=sum)
+    {
+        sum1++;
+        if((sum1+sum2)==10)
+        {
+            if(sum2/10<0.75)
+            {cout<<"Please ask your teacher for extra help."<<endl;goto A;}
+            else
+                {cout<<"Congratulations,you are ready to go to the next level!"<<endl;goto A;}
+
+        }
+        int q=rand()%4+1;
+            switch(q){
+case 1:
+    cout<<"No.Please  try again!"<<endl; break;
+case 2:
+    cout<<"Wrong .Try once more."<<endl; break;
+case 3:
+    cout<<"Do not give up!"<<endl; break;
+case 4:
+    cout<<"No.Keep trying."<<endl; break;}
+    cin>>n;
+    }
+    if(n==sum){
+            sum2++;
+            if((sum1+sum2)==10)
+        {
+            if(sum2/10<0.75)
+            {cout<<"Please ask your teacher for extra help."<<endl;goto A;}
+            else
+                {cout<<"Congratulations,you are ready to go to the next level!"<<endl;goto A;}
+
+        }
+            int p=rand()%4+1;
+    switch(p){
+case 1:
+    cout<<"Very good!"<<endl;
+    break;
+case 2:
+    cout<<"Excellent!"<<endl; break;
+case 3:
+    cout<<"Nice work!"<<endl; break;
+case 4:
+    cout<<"Keep up the good work"<<endl; break;
+    }}break;}}
+    return 0;
+}
+
+/*
+FileName : T6_12.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+double calculateCharges(double hours){
+double Charge;
+if(hours<=3){
+    Charge=2;
+}else if(hours>3&&hours<=19){
+Charge=2+(hours-3)*0.5;
+}else if(hours>19){
+Charge =10;
+}
+
+return Charge;
+}
+int main(){
+double hours,Charge,sum1,sum2;
+sum1=0;
+sum2=0;
+cout<<"Car    Hours    Charge"<<endl;
+for(int i=1;i<=3;i++){
+   cin>>hours;
+    cout<<i<<"    "<<hours<<"    "<<calculateCharges(hours)<<endl;
+    sum1=sum1+hours;
+    sum2=sum2+calculateCharges(hours);
+}
+cout<<"TOTAL"<<"    "<<sum1<<"    "<<sum2;
+return 0;
+}
+
+/*
+FileName : T6_13.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+double floor(double x){
+double y;
+int a;
+y=x;
+a=(int)y;
+if(y-a<0.5){
+    y=a;
+}else{y=a+1;}
+
+
+return y;
+}
+int main(){
+double x,y;
+int a;
+cin>>x;
+cout<<floor(x);
+
+
+return 0;
+}
+
+/*
+FileName : T6_14.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<cmath>
+using namespace std;
+void roundToInteger(double x){
+cout<<floor(x*1+0.5)<<endl;
+}
+void roundToTenths(double x){
+cout<<floor(x*10+0.5)/10<<endl;
+}
+void roundToHundredths(double x){
+cout<<floor(x*100+0.5)/100<<endl;
+}
+void roundToThousandths(double x){
+cout<<floor(x*1000+0.5)/1000<<endl;
+}
+int main(){
+double x;
+cin>>x;
+roundToInteger(x);
+roundToTenths(x);
+roundToHundredths(x);
+roundToThousandths(x);
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_16.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<ctime>
+#include<stdlib.h>
+using namespace std;
+int main(){
+int n;
+srand(time(0));
+cout<<rand()%2+1<<endl;
+cout<<rand()%100+1<<endl;
+cout<<rand()%10<<endl;
+cout<<rand()%113+1000<<endl;
+cout<<rand()%3-1<<endl;
+cout<<rand()%15-3<<endl;
+return 0;
+}
+
+/*
+FileName : T6_17.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<ctime>
+#include<stdlib.h>
+using namespace std;
+int main(){
+int a[]={2,4,6,8,10};
+int b[]={3,5,7,9,11};
+int c[]={6,10,14,18,22};
+srand(time(0));
+cout<<a[rand()%5]<<endl;
+cout<<b[rand()%5]<<endl;
+cout<<c[rand()%5]<<endl;
+
+return 0;
+}
+
+/*
+FileName : T6_18.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int integerPower(int base,int exponent){
+int a=base;
+for(int i=1;i<exponent;i++){
+    base=base*a;
+
+}
+return base;
+}
+int main(){
+int base,exponent,a;
+cin>>base>>exponent;
+cout<<integerPower(base,exponent);
+
+return 0;
+}
+
+/*
+FileName : T6_19.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<math.h>
+using namespace std;
+double hypotenuse(double side1,double side2){
+double hypotenuse;
+hypotenuse=sqrt(side1*side1+side2*side2);
+return hypotenuse;
+}
+int main(){
+double side1,side2;
+cin>>side1>>side2;
+cout<<hypotenuse(side1,side2);
+
+
+return 0;
+}
+
+/*
+FileName : T6_20.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+void multiple(int a,int b){
+if(b%a==0){
+    cout<<"true";
+    }
+else{cout<<"false";
+}
+}
+
+int main(){
+int a,b;
+cin>>a>>b;
+multiple(a,b);
+
+return 0;
+}
+
+/*
+FileName : T6_21.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+void iseven(int a){
+if(a%2==0){
+    cout<<"true"<<endl;
+}else{cout<<"false"<<endl;}
+}
+
+int main(){
+int a;
+while(1){
+    cout<<"Input the -1 to end this loop"<<endl;
+cin>>a;
+if(-1==a){
+    break;
+}
+iseven(a);
+}
+
+
+return 0;
+}
+
+/*
+FileName : T6_22.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+int side;
+cin>>side;
+int i=side;
+int a=i;
+while(i>=1){
+    while(side>=1){
+        cout<<"*";
+    side--;
+    }
+    side=a;
+cout<<endl;
+i--;
+}
+
+
+return 0;
+}
+
+/*
+FileName : T6_23.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+void fillCharacter(int side,char cha){
+int a=side;
+for(int i=1;i<=side;i++){
+    while(side>=1){
+        cout<<cha;
+   side--;
+    }
+cout<<endl;
+side=a;
+}
+
+}
+int main(){
+int a,side;
+char cha;
+cin>>side>>cha;
+fillCharacter(side,cha);
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_24.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+void integer(int a,int b){
+cout<<a/b;
+}
+void lefter(int a,int b){
+cout<<a%b;
+}
+void separate(int c){
+int arr[9999];
+int i=0;
+while(1){
+    arr[i]=c%10;
+    if(c/10==0){
+        break;
+    }
+    c=c/10;
+    i++;
+
+    }
+
+while(i>=0){
+    cout<<arr[i]<<"  ";
+    i--;
+}
+}
+
+int main(){
+int a,b,c,arr[9999],i;
+cin>>a>>b>>c;
+integer(a,b);
+cout<<endl;
+lefter(a,b);
+cout<<endl;
+separate(c);
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_25.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int time(int hour,int minute,int second){
+if(hour<=12){
+    second=hour*3600+minute*60+second;
+}else{
+second=(hour-12)*3600+minute*60+second;
+}
+return second;
+}
+int main(){
+int hour,minute,second;
+cin>>hour>>minute>>second;
+cout<<time(hour,minute,second);
+
+
+return 0;
+}
+
+/*
+FileName : T6_26.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int celsius(double fah){
+double tem;
+tem=(fah-32)/1.8;
+return tem;
+}
+int fahrenheit(double tem){
+double fah=32+tem*1.8;
+return fah;
+}
+int main(){
+for(double tem=0;tem<=100;tem++){
+    cout<<fahrenheit(tem)<<"  ";
+
+}
+    cout<<endl;
+for(double fah=32;fah<=212;fah++){
+    cout<<celsius(fah)<<"  ";
+
+
+}
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_27.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+double FindTheMin(double a,double b,double c){
+double min;
+min=a;
+if(min>b){
+    min=b;
+}else if(min>c){
+min=c;
+}
+return min;
+}
+int main(){
+double a,b,c,min;
+cin>>a>>b>>c;
+cout<<FindTheMin(a,b,c);
+return 0;
+}
+
+/*
+FileName : T6_28.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+void isperfect(int number){
+int a=1;
+int b=1;
+int sum=0;
+while(1){
+if(number%a==0&&a<number){
+sum=sum+a;
+}
+if(a==number){break;}
+    a++;
+}
+if(number==sum){cout<<endl;
+    while(1){if(number%b==0&&b<number){
+     cout<<b<<"+";
+    }
+    if(b==number){
+        cout<<"="<<number;
+        break;}
+
+b++;
+}
+
+}
+}
+int main(){
+int a,sum,number,b;
+for(number=2;number<=1000;number++){
+    isperfect(number);
+    a=1;
+    sum=0;
+    b=1;
+
+}
+return 0;
+}
+
+
+/*
+FileName : T6_29.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+void judgeTheNumber(int a){
+int x=0;
+for(int b=2;b<a;b++){
+    if(a%b==0){
+        x++;
+    }
+}
+if(x==0){
+    cout<<"Yes";
+}else{cout<<"No";}
+}
+void print(int c){
+int d=0;
+for(int i=2;i<c;i++){
+    if(c%i==0){
+        d++;
+    }
+}
+if(d==0){
+    cout<<c<<"  ";
+}
+
+}
+int main(){
+int a,x,c,d,i,b;
+cin>>a;
+judgeTheNumber(a);
+cout<<endl;
+for(c=2;c<=10000;c++){
+    print(c);
+}
+return 0;
+}
+
+/*
+FileName : T6_30.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+void reversed(int c){
+int arr[9999];
+int i=0;
+while(1){
+    arr[i]=c%10;
+    if(c/10==0){
+        break;
+    }
+    c=c/10;
+    i++;
+
+    }
+int b=0;
+while(b<=i){
+    cout<<arr[b];
+    b++;
+}
+}
+int main(){
+int c,i,b;
+int arr[9999];
+cin>>c;
+reversed(c);
+return 0;
+}
+
+/*
+FileName : T6_31.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+void ged(int a,int b){
+int max;
+max=a;
+if(max<b){
+    max=b;
+}
+while(1){
+    if(a%max==0&&b%max==0){
+   cout<<max;
+   break;
+    }
+    max--;
+    if(1==max){
+        cout<<max;
+        break;
+    }
+}
+}
+int main(){
+int a,b,max;
+cin>>a>>b;
+ged(a,b);
+
+
+return 0;
+}
+
+/*
+FileName : T6_32.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+void qualityPoints(double ave){
+if(ave>=90&&ave<=100){
+    cout<<"4";
+}else if(ave>=80&&ave<=89){
+cout<<"3";}else if(ave>=70&&ave<=79){cout<<"2";}
+else if(ave>=60&&ave<=69){cout<<"1";}else if(ave<60){cout<<"0";}
+}
+int main(){
+double ave;
+cin>>ave;
+qualityPoints(ave);
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_33.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<ctime>
+#include<stdlib.h>
+using namespace std;
+void flip(){
+srand(time(0));
+for(int i=1;i<=100;i++){
+    cout<<rand()%2<<"  ";
+}
+
+}
+int main(){
+flip();
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_34.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<ctime>
+#include<stdlib.h>
+using namespace std;
+int main(){
+srand(time(0));
+int n,i;
+i=rand()%1000+1;
+cout<<"I have a number between 1 and 1000"<<endl<<"Can you guess my number?"<<endl<<"Please type your guess"<<endl;
+while(1){
+    cin>>n;
+    if(n>i){cout<<"Too high.Try again";}else if(n<i){cout<<"Too low.Try again";}else if(n==i){cout<<"Yes!";break;}
+
+
+}
+
+
+return 0;
+}
+
+/*
+FileName : T6_35.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<ctime>
+#include<stdlib.h>
+using namespace std;
+int main(){
+srand(time(0));
+int n,i,sum;
+sum=0;
+i=rand()%1000+1;
+cout<<"I have a number between 1 and 1000"<<endl<<"Can you guess my number?"<<endl<<"Please type your guess"<<endl;
+while(1){
+    cin>>n;
+    sum++;
+    if(n>i){cout<<"Too high.Try again";}else if(n<i){cout<<"Too low.Try again";}else if(n==i){cout<<"Yes!";break;}
+
+}
+cout<<endl;
+if(sum<10){cout<<"Either you know the secret or you got lucky!";}else if(10==sum){cout<<"Ahag!You know the secret!";}
+else if(sum>10){cout<<"You should be able to do better!";}
+
+return 0;
+}
+
+/*
+FileName : T6_36.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int power(int base,int exponent){
+int a=base;
+if(exponent!=1){
+for(int i=1;i<exponent;i++){
+base=a*base;
+
+}}
+return base;
+}
+int main(){
+int base,exponent;
+cin>>base>>exponent;
+cout<<power(base,exponent);
+
+
+return 0;
+}
+
+/*
+FileName : T6_37.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int fibonacci(int n){
+
+
+	int num1 = 1;
+	int num2 = 1;
+	int tmp = 0;
+	int i = 0;
+	if (n < 3)
+	{
+		return 1;
+	}
+	else
+	{
+		for (i = 0; i>n-3; i++)
+		{
+			tmp = num1 + num2;
+			num1 = num2;
+			num2 = tmp;
+		}
+		return tmp;
+	}
+}
+int main(){
+int n;
+cout<<"1 = YES!,0 = NO!"<<endl;
+cin>>n;
+cout<<fibonacci(n);
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_38.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <stdio.h>
+void hanoi(int num, char sou, char tar,char aux) {
+    //ͳ���ƶ�����
+    static int i = 1;
+    //���Բ���������� 1 ������ֱ�Ӵ���ʼ���ƶ���Ŀ����
+    if (num == 1) {
+        printf("��%d��:�� %c �ƶ��� %c\n", i, sou, tar);
+        i++;
+    }
+    else {
+        //�ݹ���� hanoi() �������� num-1 ��Բ�̴���ʼ���ƶ�����������
+        hanoi(num - 1, sou, aux, tar);
+        //����ʼ����ʣ������һ����Բ���ƶ���Ŀ������
+        printf("��%d��:�� %c �ƶ��� %c\n", i, sou, tar);
+        i++;
+        //�ݹ���� hanoi() ���������������ϵ� num-1 Բ���ƶ���Ŀ������
+        hanoi(num - 1, aux, tar, sou);
+    }
+}
+int main()
+{
+    //���ƶ� 3 ��Բ��Ϊ������ʼ����Ŀ�������������ֱ��� A��B��C ��ʾ
+    hanoi(3, 'A', 'B', 'C');
+    return 0;
+}
+
+/*
+FileName : T6_39.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<string>
+#include<stack>
+#include<vector>
+using std::string;
+using std::cin;
+using std::cout;
+using std::stack;
+using std::vector;
+using std::endl;
+//�ƶ����̴�ӡ����
+void print(int num, string from, string to) {
+    cout << "Move " << num << " from " << from << " to " << to << endl;
+}
+
+int main()
+{
+    //����������ջ
+    stack<int> l, m, r;
+    int num;
+//    �����������
+    cin >> num;
+    //��ʼ���������е������η�����ߵ�ջ
+    for (int i = 0; i < num; i++)
+        l.push(num - i);
+    //flagΪfalse��ʾ��ߺ��м�֮���й��ƶ����м���ұ�֮��û�й��ƶ�
+    //��һ���ƶ�����������ߺ��м䣬��flag��ʼ��Ϊtrue
+    bool flag = true;
+    //��¼�ƶ�����
+    int sum = 0;
+    while (r.size() < num) {
+    //����ߺ��м�÷��������ƶ�
+        if (flag)
+        {
+        //�м�ջΪ�գ������ջ��С���м�ջ��ʱ����߳�ջ
+            if (m.empty() || (!l.empty() && l.top() < m.top())) {
+                m.push(l.top());
+                l.pop();
+                print(m.top(), "L", "M");
+            }
+            else {
+                l.push(m.top());
+                m.pop();
+                print(l.top(), "M", "L");
+            }
+            flag = false;
+        }
+        else {
+            if (r.empty() || (!r.empty() && m.top() < r.top())) {
+                r.push(m.top());
+                m.pop();
+                print(r.top(), "M", "R");
+            }
+            else {
+                m.push(r.top());
+                r.pop();
+                print(m.top(), "R", "M");
+            }
+            flag = true;
+        }
+        sum++;
+    }
+    cout << "total number of movement is " << sum << endl;
+    return 0;
+}
+
+/*
+FileName : T6_40.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+long fib(int);
+int main(){
+int num;
+cin>>num;
+cout<<fib(num);
+
+return 0;
+}
+long fib(int num)
+  {
+      if (num == 0 || num == 1)  /* �ݹ�������� */
+      {
+          return 1;
+      }
+      else
+      {
+          int result = fib(num - 1) + fib(num - 2);
+         return result;
+     }
+ }
+
+
+
+
+
+
+
+
+/*
+FileName : T6_41.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+void swap(int *m,int *n){
+	int t;
+	if(m < n){
+		t = *n;
+		n = m;
+		*m = t;
+	}
+}
+int  f(int m,int n){
+	if(m%n == 0)return n;
+	else
+		return f(n,m%n);
+}
+int main(){
+	int p = 0,m = 0,n = 0;
+	printf("�밴���ɴ�С��˳��������������,�ÿո����:\n");
+	scanf("%d%d",&m,&n);
+	swap(m,n);
+	p = f(m,n);
+	printf("�����������Լ����:%d\n",p);
+	return 0;
+}
+
+/*
+FileName : T6_42.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<math.h>
+using namespace std;
+void distance(double x1,double y1,double x2,double y2){
+double dis;
+double a=(x2-x1)*(x2-x1);
+double b=(y2-y1)*(y2-y1);
+dis=sqrt(a+b);
+
+cout<<dis;
+}
+int main(){
+double x1,x2,y1,y2;
+cin>>x1>>y1>>x2>>y2;
+distance(x1,y1,x2,y2);
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_43.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+//���������ң�if����ж���������
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_44.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int main(){
+cout<<"TO calculate two integers'es times";
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
+
+/*
+FileName : T6_45.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 11th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+using namespace std;
+int mystery(int,int);
+int main(){
+int x=0;
+int y=0;
+cout<<"Enter two integers:";
+cin>>x>>y;
+cout<<"The result is "<<mystery(x,y)<<endl;
+}
+int mystery(int a,int b){
+if(b>0){
+if(1==b)
+    return a;
+    else
+    return a+mystery(a,b-1);
+}
+if(b<0){
+    if(1==b){
+    a=a*-1;
+    return a;}
+    else
+return a+mystery(a,b+1);
+}}
+
+
+
+
+
+
+
