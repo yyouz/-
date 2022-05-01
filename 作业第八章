@@ -1,0 +1,646 @@
+/*
+FileName : T8_12.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<ctime>
+#include<stdlib.h>
+using namespace std;
+int main(){
+int a1,a2,i,a,b;
+a1=a2=1;
+srand(time(0));
+cout<<"BANG!!!"<<endl<<"AND THEY'RE OFF!!!"<<endl;
+while(a1<70&&a2<70){
+i=rand()%10+1;
+switch(i){
+case 1:
+a1=a1+3;
+a2=a2+0;
+if(a1==a2){cout<<"OUCH!!";}
+break;
+case 2:
+a1=a1+3;
+a2=a2+0;
+if(a1==a2){cout<<"OUCH!!";}
+break;
+case 3:
+a1=a1+3;
+a2=a2+9;
+if(a1==a2){cout<<"OUCH!!";}
+break;
+case 4:
+a1=a1+3;
+a2=a2+9;
+if(a1==a2){cout<<"OUCH!!";}
+break;
+case 5:
+a1=a1+3;
+a2=a2-12;
+if(a2<1){
+    a2=1;
+}
+if(a1==a2){cout<<"OUCH!!";}
+break;
+case 6:
+a1=a1-6;
+a2=a2+1;
+if(a1<1){a1=1;}
+if(a1==a2){cout<<"OUCH!!";}
+break;
+case 7:
+a1=a1-6;
+a2=a2+1;
+if(a1<1){a1=1;}
+if(a1==a2){cout<<"OUCH!!";}
+break;
+case 8:
+a1=a1+1;
+a2=a2+1;
+if(a1==a2){cout<<"OUCH!!";}
+break;
+case 9:
+a1=a1+1;
+a2=a2-2;
+if(a2<1){a2=1;}
+if(a1==a2){cout<<"OUCH!!";}
+break;
+default :
+a1=a1+1;
+a2=a2-2;
+if(a2<1){a2=1;}
+if(a1==a2){cout<<"OUCH!!";}
+break;
+}
+a=a1,b=a2;
+if(a1!=a2){
+while(a1>=1){
+    cout<<" ";
+ a1--;
+if(1==a1){cout<<"T";
+break;}
+}
+cout<<endl;
+a1=a;
+while(a2>=1){
+    cout<<" ";
+    a2--;
+if(1==a2){cout<<"H";break;}
+}
+a2=b;
+cout<<endl;
+}
+}
+if(a1>=70){cout<<"TORTOISE WINS!!!YAY!!!";}
+if(a2>=70){cout<<"Hare wins.Yuch.";}
+if(a1==a2){cout<<"It's a tie";}
+return 0;
+}
+
+/*
+FileName : T8_15.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <iomanip>
+using namespace std;
+//simpletron�����Խ��еĲ���
+void operatorQ(int memory[],int operationCode,int operand,int &accumulator,int &instructionCounter)
+{
+	switch(operationCode)
+	{
+		case 10:
+			{
+				cin >> memory[operand];
+			}break;
+		case 11:
+			{
+				cout << memory[operand] << endl;
+			}break;
+		case 20:
+		    {
+		    	accumulator = memory[operand];
+			}break;
+		case 21:
+			{
+				memory[operand] = accumulator;
+			}break;
+		case 30:
+			{
+				accumulator = memory[operand] + accumulator;
+			}break;
+		case 31:
+			{
+				accumulator = accumulator - memory[operand];
+			}break;
+		case 32:
+			{
+				accumulator = accumulator / memory[operand];
+			}break;
+		case 33:
+			{
+				accumulator = accumulator * memory[operand];
+			}break;
+		case 40:
+			{
+				instructionCounter = operand;
+				int instructionRegister = memory[instructionCounter];
+		        operationCode = instructionRegister / 100;
+		        operand = instructionRegister % 100;
+				operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+			}break;
+		case 41:
+			{
+				if(accumulator < 0)
+				{
+					instructionCounter = operand;
+				int instructionRegister = memory[instructionCounter];
+		        operationCode = instructionRegister / 100;
+		        operand = instructionRegister % 100;
+				operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+				}
+			}break;
+		case 42:
+			{
+				if(0 == accumulator)
+				{
+					instructionCounter = operand;
+				int instructionRegister = memory[instructionCounter];
+		        operationCode = instructionRegister / 100;
+		        operand = instructionRegister % 100;
+				operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+				}
+			}break;
+		case 43:
+			{
+
+			}break;
+		default:
+		{
+
+		}break;
+	}
+}
+//��ӡ��ʼ����
+void printS()
+{
+	cout << "*** Welcome to Simpletron! ***" << endl;
+	cout << "*** Please enter your program one instruction ***" << endl;
+	cout << "*** (or date word)at a time.I will type the ***" << endl;
+	cout << "*** location number and a question mark (?). ***" << endl;
+	cout << "*** You then type the word for that location. ***" << endl;
+	cout << "*** Type the sentinel -99999 to stop entering ***" << endl;
+	cout << "*** your program. ***" << endl;
+}
+
+//��ӡ�Ĵ������ڴ�ת��
+void printP(int memory[],int operationCode,int instructionRegister,int operand,int &accumulator,int &instructionCounter)
+{
+	cout << "REGISTERS:" << endl;
+	cout << left << setw(20) << "accumulator:";
+	cout << setw(5) << showpos << setfill('0') << internal << accumulator << endl;
+
+	cout << left << setw(20) << "instructionCounter:";
+	cout << "   ";
+	cout << setw(2) << noshowpos << setfill('0') << internal << instructionCounter << endl;
+
+	cout << left << setw(20) << "instructionRegister:";
+	cout << setw(5) << showpos << setfill('0') << internal << instructionRegister << endl;
+
+	cout << left << setw(20) << "operationCode:";
+	cout << "   ";
+	cout << setw(2) << noshowpos << setfill('0') << internal << operationCode << endl;
+
+	cout << left << setw(20) << "operand:";
+	cout << "   ";
+	cout << setw(2) << noshowpos << setfill('0') << internal << operand << endl;
+
+	cout << endl;
+
+	cout << "MEMORY:" << endl;
+	cout << "  ";
+	for(int i = 0;i<=9;i++)
+	{
+		cout << setw(5) << setfill(' ') << internal << i;
+	}
+	cout << endl;
+	for(int i = 0;i<=90;i=i+10)
+	{
+		cout << setw(2)  << noshowpos << i;
+		for(int j = 0;j<=9;j++)
+		{
+			cout << setw(5) << showpos << setfill('0') << internal << memory[i+j];
+		}
+		cout << endl;
+	}
+}
+
+int main()
+{
+	//�ڴ�����:����һ�������������ǵĺͣ���������ʱ�˳�����
+	int memory[100] = {+1051,+1052,+2052,+4107,+3051,+2151,+4001,+1151,+4300};
+	//�ۼӼĴ���
+	int accumulator = 0;
+	//��ǰ�ڴ�λ��
+	int instructionCounter = 0;
+	//������
+	int operationCode = 0;
+	//������λ��
+	int  operand = 0;
+	//��Ҫִ�е�ָ��
+	int instructionRegister = 0;
+	//��ӡ��ʼ����
+	printS();
+	//ִ�����е�ָ��
+	for(int instructionCounter = 0;instructionCounter<=100;instructionCounter++)
+	{
+		instructionRegister = memory[instructionCounter];
+		operationCode = instructionRegister / 100;
+		operand = instructionRegister % 100;
+		operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+		if(memory[instructionCounter] == 4300)
+		break;
+	}
+
+	printP(memory,operationCode,instructionRegister,operand,accumulator,instructionCounter);
+	return 0;
+}
+
+/*
+FileName : T8_16.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <iomanip>
+using namespace std;
+//simpletron�����Խ��еĲ���
+void operatorQ(int memory[],int operationCode,int operand,int &accumulator,int &instructionCounter)
+{
+	switch(operationCode)
+	{
+		case 10:
+			{
+				cin >> memory[operand];
+			}break;
+		case 11:
+			{
+				cout << memory[operand] << endl;
+			}break;
+		case 20:
+		    {
+		    	accumulator = memory[operand];
+			}break;
+		case 21:
+			{
+				memory[operand] = accumulator;
+			}break;
+		case 30:
+			{
+				accumulator = memory[operand] + accumulator;
+			}break;
+		case 31:
+			{
+				accumulator = accumulator - memory[operand];
+			}break;
+		case 32:
+			{
+				accumulator = accumulator / memory[operand];
+			}break;
+		case 33:
+			{
+				accumulator = accumulator * memory[operand];
+			}break;
+		case 40:
+			{
+				instructionCounter = operand;
+				int instructionRegister = memory[instructionCounter];
+		        operationCode = instructionRegister / 100;
+		        operand = instructionRegister % 100;
+				operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+			}break;
+		case 41:
+			{
+				if(accumulator < 0)
+				{
+					instructionCounter = operand;
+				int instructionRegister = memory[instructionCounter];
+		        operationCode = instructionRegister / 100;
+		        operand = instructionRegister % 100;
+				operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+				}
+			}break;
+		case 42:
+			{
+				if(0 == accumulator)
+				{
+					instructionCounter = operand;
+				int instructionRegister = memory[instructionCounter];
+		        operationCode = instructionRegister / 100;
+		        operand = instructionRegister % 100;
+				operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+				}
+			}break;
+		case 43:
+			{
+
+			}break;
+		default:
+		{
+
+		}break;
+	}
+}
+//��ӡ��ʼ����
+void printS()
+{
+	cout << "*** Welcome to Simpletron! ***" << endl;
+	cout << "*** Please enter your program one instruction ***" << endl;
+	cout << "*** (or date word)at a time.I will type the ***" << endl;
+	cout << "*** location number and a question mark (?). ***" << endl;
+	cout << "*** You then type the word for that location. ***" << endl;
+	cout << "*** Type the sentinel -99999 to stop entering ***" << endl;
+	cout << "*** your program. ***" << endl;
+}
+
+//��ӡ�Ĵ������ڴ�ת��
+void printP(int memory[],int operationCode,int instructionRegister,int operand,int &accumulator,int &instructionCounter)
+{
+	cout << "REGISTERS:" << endl;
+	cout << left << setw(20) << "accumulator:";
+	cout << setw(5) << showpos << setfill('0') << internal << accumulator << endl;
+
+	cout << left << setw(20) << "instructionCounter:";
+	cout << "   ";
+	cout << setw(2) << noshowpos << setfill('0') << internal << instructionCounter << endl;
+
+	cout << left << setw(20) << "instructionRegister:";
+	cout << setw(5) << showpos << setfill('0') << internal << instructionRegister << endl;
+
+	cout << left << setw(20) << "operationCode:";
+	cout << "   ";
+	cout << setw(2) << noshowpos << setfill('0') << internal << operationCode << endl;
+
+	cout << left << setw(20) << "operand:";
+	cout << "   ";
+	cout << setw(2) << noshowpos << setfill('0') << internal << operand << endl;
+
+	cout << endl;
+
+	cout << "MEMORY:" << endl;
+	cout << "  ";
+	for(int i = 0;i<=9;i++)
+	{
+		cout << setw(5) << setfill(' ') << internal << i;
+	}
+	cout << endl;
+	for(int i = 0;i<=90;i=i+10)
+	{
+		cout << setw(2)  << noshowpos << i;
+		for(int j = 0;j<=9;j++)
+		{
+			cout << setw(5) << showpos << setfill('0') << internal << memory[i+j];
+		}
+		cout << endl;
+	}
+}
+
+int main()
+{
+	//�ڴ�����
+	int memory[100];
+	//�ۼӼĴ���
+	int accumulator = 0;
+	//��ǰ�ڴ�λ��
+	int instructionCounter = 0;
+	//������
+	int operationCode = 0;
+	//������λ��
+	int  operand = 0;
+	//��Ҫִ�е�ָ��
+	int instructionRegister = 0;
+	//��ӡ��ʼ����
+	printS();
+	//ѭ����������ָ��
+	for(int instructionCounter = 0;instructionCounter<=100;instructionCounter++)
+	{
+		cout << setfill('0')  << setw(2)<< instructionCounter << " " << "?" << " ";
+		while(cin >> instructionRegister)
+		{
+			if(instructionRegister<-99999 || instructionRegister>+99999)
+			{
+				cout << "Error,please enter the instruction again." << endl;
+				continue;
+			}
+			break;
+		}
+		memory[instructionCounter] = instructionRegister;
+		if(instructionRegister == -99999)
+		break;
+	}
+	//ִ�����е�ָ��
+	for(int instructionCounter = 0;instructionCounter<=100;instructionCounter++)
+	{
+		instructionRegister = memory[instructionCounter];
+		operationCode = instructionRegister / 100;
+		operand = instructionRegister % 100;
+		operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+		if(memory[instructionCounter] == 4300)
+		break;
+	}
+
+	printP(memory,operationCode,instructionRegister,operand,accumulator,instructionCounter);
+	return 0;
+}
+
+/*
+FileName : T8_17.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <iomanip>
+#include <bitset>
+using namespace std;
+//simpletron�����Խ��еĲ���
+void operatorQ(double memory[],int operationCode,int operand,double &accumulator,int &instructionCounter)
+{
+	switch(operationCode)
+	{
+		case 10:
+			{
+				cin >> memory[operand];
+			}break;
+		case 11:
+			{
+				cout << memory[operand];
+			}break;
+		case 12:
+			{
+				cout << "\n";
+			}break;
+		case 20:
+		    {
+		    	accumulator = memory[operand];
+			}break;
+		case 21:
+			{
+				memory[operand] = accumulator;
+			}break;
+		case 30:
+			{
+				accumulator = memory[operand] + accumulator;
+			}break;
+		case 31:
+			{
+				accumulator = accumulator - memory[operand];
+			}break;
+		case 32:
+			{
+				accumulator = accumulator / memory[operand];
+			}break;
+		case 33:
+			{
+				accumulator = accumulator * memory[operand];
+			}break;
+		case 34:
+			{
+				accumulator = (int)accumulator % (int)memory[operand];
+			}break;
+		case 35:
+			{
+				int x = accumulator;
+				for(;memory[operand]-1>0;memory[operand]--)
+				{
+					accumulator = accumulator * x;
+				}
+			}break;
+		case 40:
+			{
+				instructionCounter = operand;
+				int instructionRegister = memory[instructionCounter];
+		        operationCode = instructionRegister / 100;
+		        operand = instructionRegister % 100;
+				operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+			}break;
+		case 41:
+			{
+				if(accumulator < 0)
+				{
+					instructionCounter = operand;
+				int instructionRegister = memory[instructionCounter];
+		        operationCode = instructionRegister / 100;
+		        operand = instructionRegister % 100;
+				operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+				}
+			}break;
+		case 42:
+			{
+				if(0 == accumulator)
+				{
+					instructionCounter = operand;
+				int instructionRegister = memory[instructionCounter];
+		        operationCode = instructionRegister / 100;
+		        operand = instructionRegister % 100;
+				operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+				}
+			}break;
+		case 43:
+			{
+
+			}break;
+		case 44:
+			{
+				if(01 == operand)
+				operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+				else if(02 == operand)
+				{
+
+				}
+			}break;
+		default:
+		{
+
+		}break;
+	}
+}
+//��ӡ��ʼ����
+void printS()
+{
+	cout << "*** Welcome to Simpletron! ***" << endl;
+	cout << "*** Please enter your program one instruction ***" << endl;
+	cout << "*** (or date word)at a time.I will type the ***" << endl;
+	cout << "*** location number and a question mark (?). ***" << endl;
+	cout << "*** You then type the word for that location. ***" << endl;
+	cout << "*** Type the sentinel -99999 to stop entering ***" << endl;
+	cout << "*** your program. ***" << endl;
+}
+
+int main()
+{
+	//�����ַ��洢16������
+	char a[20];
+	//�ڴ�����
+	double memory[1000];
+	//�ۼӼĴ���
+	double accumulator = 0;
+	//��ǰ�ڴ�λ��
+	int instructionCounter = 0;
+	//������
+	int operationCode = 0;
+	//������λ��
+	int  operand = 0;
+	//��Ҫִ�е�ָ��
+	int instructionRegister = 0;
+	//��ӡ��ʼ����
+	printS();
+	//ѭ����������ָ��
+	for(int instructionCounter = 0;instructionCounter<=100;instructionCounter++)
+	{
+		cout << setfill('0')  << setw(2)<< instructionCounter << " " << "?" << " ";
+		//����16������
+		while(cin >> a)
+		{
+			char *stop;
+			instructionRegister = strtol(a,&stop,16);
+			if(instructionRegister<-99999 || instructionRegister>+99999)
+			{
+				cout << "Error,please enter the instruction again." << endl;
+				continue;
+			}
+			break;
+		}
+		memory[instructionCounter] = instructionRegister;
+		if(instructionRegister == -99999)
+		break;
+	}
+	//ִ�����е�ָ��
+	for(int instructionCounter = 0;instructionCounter<=100;instructionCounter++)
+	{
+		instructionRegister = memory[instructionCounter];
+		operationCode = instructionRegister / 100;
+		operand = instructionRegister % 100;
+		operatorQ(memory,operationCode,operand,accumulator,instructionCounter);
+		if(memory[instructionCounter] == 4300)
+		break;
+	}
+	return 0;
+}
