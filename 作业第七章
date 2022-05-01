@@ -1,0 +1,1646 @@
+/*
+FileName : T7_13.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <array>
+using namespace std;
+
+int main()
+{
+	array<int,20>a;
+	bool p = true;
+	int n = 0;
+	int x;
+
+	for(int i = 0;i<20;i++)
+	{
+		cin >> x;
+	if(x>=10 && x<=100)
+	{
+		for(int i = 0;i<a.size();i++)
+		{
+			if(a[i] == x)
+			{
+				p = false;
+				break;
+			}
+		}
+		if(p)
+		{
+			a[n] = x;
+			n++;
+		}
+		p = true;
+	}
+	}
+
+	for(int i = 0;i<n;i++)
+	{
+		cout << a[i] << " ";
+	}
+	return 0;
+}
+
+/*
+FileName : T7_14.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+	vector<int>a;
+	bool p = true;
+	int x;
+	for(int i = 0;i<20;i++)
+	{
+		cin >> x;
+	    if(x>=10 && x<=100)
+	    {
+	    		for(int j = 0;j<a.size();j++)
+		{
+			if(a[j] == x)
+			{
+				p = false;
+				break;
+			}
+		}
+		if(p)
+		a.push_back(x);
+		p = true;
+		}
+	}
+
+	for(int i = 0;i<a.size();i++)
+	{
+		cout << a[i] << " ";
+	}
+	return 0;
+}
+
+/*
+FileName : T7_15.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <array>
+using namespace std;
+
+const int row = 3;
+const int column = 5;
+int main()
+{
+	array<array<int,column>,row>sales;
+	int counter = 1;
+	//��ʼ��array����Ϊ1-15
+	for(size_t r = 0;r<sales.size();r++)
+	{
+		for(size_t c = 0;c<sales[r].size();c++)
+		{
+			sales[r][c] = counter;
+			counter++;
+		}
+	}
+	//��˳�����array����
+	for(size_t r = 0;r<sales.size();r++)
+	{
+		for(size_t c = 0;c<sales[r].size();c++)
+		{
+			cout << sales[r][c] << " ";
+		}
+	}
+
+}
+
+/*
+FileName : T7_16.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <array>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+	array<int,13>a = {0};
+
+	for(int i = 0;i<36000;i++)
+	{
+	int x = 1 + rand()%6;
+	int y = 1 + rand()%6;
+	int sum = x +y;
+
+	a[sum]++;
+	}
+	for(int i = 2;i<=12;i++)
+	{
+		cout << a[i] << " ";
+	}
+	cout << endl;
+	return 0;
+}
+
+/*
+FileName : T7_18.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+//��˫���Ӻ���
+unsigned int rollDice()
+{
+	unsigned int die1 = 1 + rand() % 6;
+	unsigned int die2 = 1 + rand() % 6;
+	cout << "Player rolled " << die1 << " + " << die2 << " = " << die1 + die2 << endl;
+	return die1 + die2;
+}
+//��Ϸ���ֺ���
+int game()
+{
+	srand(static_cast<unsigned int>(time(0)));
+	enum Status { CONTINUE, WON, LOST };
+	unsigned int myPoint = 0;
+	Status gameStatus = CONTINUE;
+	unsigned int sumOfDice = rollDice();
+	switch (sumOfDice)
+	{
+	case 7:
+	case 11:
+		gameStatus = WON;
+		break;
+	case 2:
+	case 3:
+	case 12:
+		gameStatus = LOST;
+		break;
+	default:
+		gameStatus = CONTINUE;
+		myPoint = sumOfDice;
+		cout << "Point is " << myPoint << endl;
+	}
+	while (CONTINUE == gameStatus)
+	{
+		sumOfDice = rollDice();
+		if (sumOfDice == myPoint) { gameStatus = WON; }
+		else if (7 == sumOfDice) { gameStatus = LOST; }
+	}
+	if (WON == gameStatus) { cout << "Player wins" << endl; }
+	else { cout << "Player loses" << endl; }
+	if (WON == gameStatus)return 1;
+	return 0;
+}
+int main()
+{
+	int i = 1000,j = 0;
+	while(i--)
+	{
+		if(game())
+		{
+			j++;
+		}
+	}
+	cout << "Ӯ���� " << j << endl;
+	cout << "�䳡�� " << 1000 - j << endl;
+	return 0;
+}
+
+/*
+FileName : T7_19.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <iomanip>
+#include <array>
+#include <stdexcept>
+using namespace std;
+
+void outputArray1( const array<int,7>&array );
+void inputArray1( array<int,7> &array );
+void outputArray2( const array<int,10>&array );
+void inputArray2( array<int,10> &array );
+
+int main()
+{
+	array<int,7>integers1 = {0};
+	array<int,10>integers2 = {0};
+	cout<<"Size of array integers1 is "<<integers1.size()<<"\nArray after initialization: "<<endl;
+	outputArray1(integers1);
+	cout<<"\nSize of array integers2 is "<<integers1.size()<<"\nArray after initialization: "<<endl;
+	outputArray2( integers2 );
+
+	cout<<"\nEnter 17 integers:"<<endl;
+	inputArray1(integers1);
+	inputArray2(integers2);
+	cout<<"\nAfter input,the array contain:\n"<<"integers1:"<<endl;
+	outputArray1(integers1);
+	cout<<"integers2:"<<endl;
+	outputArray2(integers2);
+
+	cout<<"\nintegers1[5] is "<<integers1[5];
+	cout<<"\n\nAssigning 1000 to integers1[5]"<<endl;
+	integers1[5] = 1000;
+	cout<<"integers1:"<<endl;
+	outputArray1(integers1 );
+
+	try
+	{
+		cout<<"\nAttempt to display integers1.at(15)"<<endl;
+		cout<<integers1.at(15)<<endl;
+	}
+	catch( out_of_range &ex )
+	{
+		cerr<<"An exception occurred: "<<ex.what()<<endl;
+	}
+
+}
+void outputArray1( const array<int,7>&array )
+{
+	for(int item : array )
+	cout<<item<<" ";
+	cout<<endl;
+}
+
+void inputArray1( array<int,7> &array )
+{
+	for( int &item : array )
+	cin>>item;
+}
+
+void outputArray2( const array<int,10>&array )
+{
+	for(int item : array )
+	cout<<item<<" ";
+	cout<<endl;
+}
+
+void inputArray2( array<int,10> &array )
+{
+	for( int &item : array )
+	cin>>item;
+}
+
+/*
+FileName : T7_21.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+
+#include <iostream>
+#include <array>
+using namespace std;
+
+const int r = 6;
+const int c = 5;
+
+int main()
+{
+	array<array<int,c>,r>a;
+	int m,n;
+	int x;
+	//��������Сֽ��������������
+	for(int i = 0;i<600;i++)
+	{
+		cin >> m >> n >> x;
+		a[n][m] = x;
+	}
+	//��ÿ�ֲ�Ʒ�ܵ����۶�
+	for(int j = 0;j<5;j++)
+	{
+	int sum = 0;
+	for(int i = 0;i<4;i++)
+	{
+		sum+=a[j][i];
+	}
+	a[j][5] = sum;
+	sum = 0;
+    }
+	//��ÿλԱ���ܵ����۶�
+	for(int j = 0;j<4;j++)
+	{
+	int sum = 0;
+	for(int i = 0;i<5;i++)
+	{
+		sum+=a[i][j];
+	}
+	a[6][j] = sum;
+	sum = 0;
+    }
+    //�������
+    for(int j = 0;j<5;j++)
+    {
+    	cout << j+1 << "��Ա��" << "\t";
+	for(int i = 0;i<5;i++)
+	{
+		cout << a[j][i] << " ";
+	 }
+	 cout << endl;
+    }
+	cout << "�����ܶ�" << "\t";
+	for(int i = 0;i<5;i++)
+	{
+		cout << a[5][i] << " ";
+	}
+
+	return 0;
+}
+
+/*
+FileName : T7_22.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <array>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+const int s = 8;//����ĳ���
+//��ӡarray����
+void printArray(array<array<int,s>,s>a)
+{
+	for(int i = 0;i<a.size();i++)
+	{
+		for(int j = 0;j<a[s].size();j++)
+		{
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+//�жϵ�ǰ�Ƿ�����ƶ�
+bool canMove(array<array<int,s>,s>a,int row,int column)
+{
+	return row>=0&&row<s&&column>=0&&column<s&&a[row][column] == 0;
+}
+int main()
+{
+	//��ʼ������Ϊ0
+	array<array<int,s>,s>board = {0};
+	printArray(board);
+	array<array<int,s>,s>access =
+	{
+		2, 3, 4, 4, 4, 4, 3, 2,
+        3, 4, 6, 6, 6, 6, 4, 3,
+        4, 6, 8, 8, 8, 8, 6, 4,
+        4, 6, 8, 8, 8, 8, 6, 4,
+        4, 6, 8, 8, 8, 8, 6, 4,
+        4, 6, 8, 8, 8, 8, 6, 4,
+        3, 4, 6, 6, 6, 6, 4, 3,
+        2, 3, 4, 4, 4, 4, 3, 2
+	};
+	//�ƶ���ʽ
+	array<int,s>horizontal = {2,1,-1,-2,-2,-1,1,2};
+	array<int,s>vertical = {-1,-2,-2,-1,1,2,2,1};
+	int m;
+	bool p;
+
+	bool q = true;//�Ƿ��ܼ����ƶ�
+
+	int minRow,minCol; // ����ŵ�ʱͨ��access�ȽϺ�Ľ�С�ģ����ѣ���Ѳ�η�ʽ
+	int minAccess=9; // ��������ҵ���С��access�����е�ֵ
+	int accessNumber;
+
+	int currentRow,currentColumn;//��¼��ǰλ��
+	int testRow,testColumn;//���Կ���λ��
+	srand((int)time(NULL));
+	currentRow = rand() % 8;
+	currentColumn = rand() % 8;
+	int moveNumber = 1;//�ƶ�����
+	board[currentRow][currentColumn] = moveNumber;
+
+	while(q)
+	{
+		accessNumber=minAccess;
+		//ѭ�����������ƶ���ʽ���ҳ�Ŀ���ƶ���ʽ
+		for(m = 0;m<s;m++)
+		{
+		testRow = currentRow + vertical[m];
+		testColumn = currentColumn + horizontal[m];
+		p = canMove(board,testRow,testColumn);
+
+		if(p)
+		{
+			if(access[testRow][testColumn]<accessNumber)
+				{
+					accessNumber=access[testRow][testColumn];
+					minRow=testRow;
+					minCol=testColumn;
+				}
+				access[testRow][testColumn]--;
+
+		}
+		}
+		if(accessNumber==minAccess)
+			q = false;
+		else
+		{
+			currentRow=minRow;
+			currentColumn=minCol;
+			board[currentRow][currentColumn]=++moveNumber;
+		}
+
+	}
+
+	printArray(board);
+	return 0;
+}
+
+
+/*
+FileName : T7_23.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+const int size=8;
+
+void init(int road[size][size])
+{
+	for(int i=0;i<size;i++)
+	{
+		for(int j=0;j<size;j++)
+		{
+			road[i][j]=0;
+		}
+	}
+}
+void printarr(int road[size][size])
+{
+	for(int i=0;i<size;i++)
+	{
+		for(int j=0;j<size;j++)
+		{
+			printf("%d  ",road[i][j]);
+		}
+		cout<<endl;
+	}
+	cout<<endl;
+}
+
+bool validMove(int row,int col,int road[size][size])
+{
+	return row>=0&&row<size&&col>=0&&col<=size&&road[row][col]==0;
+}
+int main()
+{
+	for(int counter = 1;counter<=1000;counter++)
+	{
+		int road[size][size]; // �������������¼��ʿ��Ѳ�ε�·��
+	init(road);
+	cout<<"��ʼ�������ʿ·������: "<<endl;
+	printarr(road);
+	bool done= false;
+	bool goodMove;
+
+	int horizontal[8]={-2,1,-1,-2,-2,-1,1,2};
+	int vertical[8]={-1,-2,-1,-1,1,2,2,1};
+	int movetype; // ѡ��Ѳ�εķ�ʽ
+	int moveNumber=1;
+
+	int currentRow,currentCol;
+	int testRow,testCol;
+	srand((int)time(NULL));
+	currentRow=rand()%8;
+	currentCol=rand()%8; // ���Ʒ�Χ��0-7;
+
+	while(!done) // ��ʼѲ��ֱ��ȫ���ո�����
+	{
+		movetype=0; // ��̽��
+		testRow = currentRow + vertical[movetype];
+		testCol = currentCol + horizontal[movetype];
+		goodMove = validMove(testRow,testCol,road);
+
+		if(goodMove)
+		{
+			currentCol=testCol;
+			currentRow=testRow;
+			road[currentRow][currentCol]= moveNumber++;
+		}
+		else
+		{
+			for(int count=0;count<size-1&&!goodMove;count++)
+			{
+				movetype = ++movetype%size;
+				testRow = currentRow + vertical[movetype];
+				testCol = currentCol + horizontal[movetype];
+				goodMove = validMove(testRow,testCol,road);
+
+				if(goodMove)
+				{
+					currentCol=testCol;
+					currentRow=testRow;
+					road[currentRow][currentCol]= moveNumber++;
+				}
+			}
+			if(!goodMove) // ���е��߷���������
+				done=true;
+		}
+	}
+	printarr(road);
+	}
+	return 0;
+}
+
+
+/*
+FileName : T7_24.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include <cmath>
+using namespace std;
+
+//����������Żʺ����ڵ�����������n��n�У���sum�ֽⷨ
+int a[10], n, num;
+
+//����ܷ��ڸ�λ�÷��ûʺ� ��kΪ��ǰ�ʺ����ڵ�����
+bool check(int a[], int k)
+{
+	for (int i = 1; i <= k - 1; i++)
+	{
+		if ((fabs(a[i] - a[k]) == k - i) || (a[i] == a[k]))
+//�����ǰλ�õ���б�Ϸ�������б�Ϸ��лʺ󣬻���ͬһ���лʺ󷵻�false
+			return false;
+	}
+	return true;
+}
+
+//kΪ����
+void backtrack(int k)
+{
+	if (k>n)//�����Ѿ��ҵ���
+	{
+		//������лʺ����ڵ�����
+		for (int i = 1; i <= 8; i++)
+		{
+			cout << a[i];
+		}
+		cout << endl;
+		num++;
+	}
+	else
+	{
+		for (int i = 1; i <= n; i++)
+		{
+			a[k] = i;
+			if (check(a, k))
+			{
+				backtrack(k + 1);
+			}
+		}
+	}
+
+}
+
+int main()
+{
+	n = 8, num = 0;
+	backtrack(1);
+	cout <<"The ways of queens is" <<num << endl;
+	return 0;
+}
+
+
+
+/*
+FileName : T7_25.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	int n = 8;
+	int sum = 0;
+	int a[10];
+	bool p = true;
+	for(int x1 = 1;x1<=8;x1++)
+	{
+		a[1] = x1;
+		for(int x2 = 1;x2<=8;x2++)
+		{
+			a[2] = x2;
+			for(int x3 = 1;x3<=8;x3++)
+			{
+				a[3] = x3;
+				for(int x4 = 1;x4<=8;x4++)
+				{
+					a[4] = x4;
+					for(int x5 = 1;x5<=8;x5++)
+					{
+						a[5] = x5;
+						for(int x6 = 1;x6<=8;x6++)
+						{
+							a[6] = x6;
+							for(int x7 = 1;x7<=8;x7++)
+							{
+								a[7] = x7;
+								for(int x8 = 1;x8<=8;x8++)
+								{
+									a[8] = x8;
+									p = true;
+									for(int i = 8;i>=1;i--)
+									{
+										for(int j = 1;j<=8;j++)
+										{
+											if(i>j)
+											{
+												if (( fabs(a[i] - a[j]) == i-j) || (a[i] == a[j]))
+										{
+											p = false;
+										}
+											}
+										if(!p)
+										break;
+										}
+										if(!p)
+										break;
+									}
+									if(p)
+										{
+											for(int i = 1;i<=8;i++)
+											{
+												cout << a[i];
+											}
+											cout << endl;
+											sum++;
+										}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	cout << sum;
+	return 0;
+}
+
+/*
+FileName : T7_26.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <array>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+const int s = 8;//����ĳ���
+//��ӡarray����
+void printArray(array<array<int,s>,s>a)
+{
+	for(int i = 0;i<a.size();i++)
+	{
+		for(int j = 0;j<a[s].size();j++)
+		{
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+//�жϵ�ǰ�Ƿ�����ƶ�
+bool canMove(array<array<int,s>,s>a,int row,int column)
+{
+	return row>=0&&row<s&&column>=0&&column<s&&a[row][column] == 0;
+}
+
+bool canMove1(array<array<int,s>,s>a,int row,int column)
+{
+	return row>=0&&row<s&&column>=0&&column<s;
+}
+int main()
+{
+	//��ʼ������Ϊ0
+	array<array<int,s>,s>board = {0};
+	printArray(board);
+	array<array<int,s>,s>access =
+	{
+		2, 3, 4, 4, 4, 4, 3, 2,
+        3, 4, 6, 6, 6, 6, 4, 3,
+        4, 6, 8, 8, 8, 8, 6, 4,
+        4, 6, 8, 8, 8, 8, 6, 4,
+        4, 6, 8, 8, 8, 8, 6, 4,
+        4, 6, 8, 8, 8, 8, 6, 4,
+        3, 4, 6, 6, 6, 6, 4, 3,
+        2, 3, 4, 4, 4, 4, 3, 2
+	};
+	//�ƶ���ʽ
+	array<int,s>horizontal = {2,1,-1,-2,-2,-1,1,2};
+	array<int,s>vertical = {-1,-2,-2,-1,1,2,2,1};
+	int m;
+	bool p;
+
+	bool q = true;//�Ƿ��ܼ����ƶ�
+
+	int minRow,minCol; // ����ŵ�ʱͨ��access�ȽϺ�Ľ�С�ģ����ѣ���Ѳ�η�ʽ
+	int minAccess=9; // ��������ҵ���С��access�����е�ֵ
+	int accessNumber;
+
+	int currentRow,currentColumn;//��¼��ǰλ��
+	int testRow,testColumn;//���Կ���λ��
+	srand((int)time(NULL));
+	currentRow = rand() % 8;
+	currentColumn = rand() % 8;
+	int moveNumber = 1;//�ƶ�����
+	board[currentRow][currentColumn] = moveNumber;
+
+	while(q)
+	{
+		accessNumber=minAccess;
+		//ѭ�����������ƶ���ʽ���ҳ�Ŀ���ƶ���ʽ
+		for(m = 0;m<s;m++)
+		{
+		testRow = currentRow + vertical[m];
+		testColumn = currentColumn + horizontal[m];
+		p = canMove(board,testRow,testColumn);
+
+		if(p)
+		{
+			if(access[testRow][testColumn]<accessNumber)
+				{
+					accessNumber=access[testRow][testColumn];
+					minRow=testRow;
+					minCol=testColumn;
+				}
+				access[testRow][testColumn]--;
+
+		}
+		}
+		if(accessNumber==minAccess)
+			q = false;
+		else
+		{
+			currentRow=minRow;
+			currentColumn=minCol;
+			board[currentRow][currentColumn]=++moveNumber;
+		}
+
+	}
+	for(m = 0;m<s;m++)
+		{
+		testRow = currentRow + vertical[m];
+		testColumn = currentColumn + horizontal[m];
+        p = canMove1(board,testRow,testColumn);
+
+		if(p)
+		{
+			if(access[testRow][testColumn]<accessNumber)
+				{
+					accessNumber=access[testRow][testColumn];
+					minRow=testRow;
+					minCol=testColumn;
+				}
+				access[testRow][testColumn]--;
+
+		}
+		}
+		if(accessNumber==minAccess)
+			q = false;
+		else
+		{
+			currentRow=minRow;
+			currentColumn=minCol;
+			board[currentRow][currentColumn]=++moveNumber;
+		}
+
+			printArray(board);
+		bool w = true;
+		for(int i = 0;i<=12;i++)
+		{
+			for(int j = 0;j<=12;j++)
+			{
+				if(board[i][j] == 1)
+				{
+					w = false;
+					break;
+				}
+			}
+			if(!w)
+			break;
+		}
+	if(w)
+	cout << "��һ����յ�Ѳ��" << endl;
+	else
+	cout << "����һ����յ�Ѳ��" << endl;
+
+	return 0;
+}
+
+
+
+/*
+FileName : T7_27.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+
+#include <iostream>
+#include <array>
+using namespace std;
+
+int main()
+{
+    int i;
+    //������ȫ����ʼ��Ϊ1
+    array<int,1000>a = {0};
+    for(i=2;i<=1000;i++)
+    {
+        a[i]=1;
+    }
+    //���±��б�����ϵ�����޸�Ϊ0
+    for(i=2;i<=1000;i++)
+    {
+        for(int c=i*2;c<=1000;c+=i)
+        {
+            a[c]=0;
+        }
+    }
+    //�������
+    cout<<"1000���ڵ�����Ϊ��"<<endl;
+    for(i=2;i<=1000;i++)
+    {
+        if(a[i])
+        cout<<i<<" ";
+    }
+    return 0;
+}
+
+
+/*
+FileName : T7_28.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <vector>
+using namespace std;
+//�ݹ���ĺ������ж��ַ����Ƿ�Գ�
+bool testPalindrome(vector<char>a,int x,int y,int s)
+{
+   if((y+1) == s && a[0] == a[s-1])
+   return 1;
+   else
+   return (a[x] == a[y]) && testPalindrome(a,x - 1,y + 1,s);
+}
+
+int main()
+{
+	//ʹ��string[]Ҳ����
+	//���ַ����洢�ڶ�̬�ַ�������
+	vector<char>a;
+	char ch;
+	while(true)
+	{
+		ch = getchar();
+		if(ch == '\n')
+		break;
+		a.push_back(ch);
+	}
+	//����м�ԳƵ������±�x,y
+	int s = a.size();
+	int x,y;
+	if(s % 2 != 0)
+	{
+	    x = s/2-1;
+	    y = s/2+2-1;
+	}
+	else if(s % 2 == 0)
+	{
+		x = s/2-1;
+		y = s/2+1-1;
+	}
+
+	cout << testPalindrome(a,x,y,s);
+	return 0;
+}
+
+/*
+FileName : T7_29.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include <cmath>
+using namespace std;
+
+//����������Żʺ����ڵ�����������n��n�У���sum�ֽⷨ
+int a[10], n, num;
+
+//����ܷ��ڸ�λ�÷��ûʺ� ��kΪ��ǰ�ʺ����ڵ�����
+bool check(int a[], int k)
+{
+	for (int i = 1; i <= k - 1; i++)
+	{
+		if ((fabs(a[i] - a[k]) == k - i) || (a[i] == a[k]))
+//�����ǰλ�õ���б�Ϸ�������б�Ϸ��лʺ󣬻���ͬһ���лʺ󷵻�false
+			return false;
+	}
+	return true;
+}
+
+//kΪ����
+void backtrack(int k)
+{
+	if (k>n)//�����Ѿ��ҵ���
+	{
+		//������лʺ����ڵ�����
+		for (int i = 1; i <= 8; i++)
+		{
+			cout << a[i];
+		}
+		cout << endl;
+		num++;
+	}
+	else
+	{
+		for (int i = 1; i <= n; i++)
+		{
+			a[k] = i;
+			if (check(a, k))
+			{
+				backtrack(k + 1);
+			}
+		}
+	}
+
+}
+
+int main()
+{
+	n = 8, num = 0;
+	backtrack(1);
+	cout <<"The ways of queens is" <<num << endl;
+	return 0;
+}
+
+/*
+FileName : T7_30.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <array>
+using namespace std;
+//�����ӡarray����
+void printArray(array<int,10>a,int x,int y)
+{
+	if(x == y)
+	cout << a[y];
+	else
+    {
+    	cout << a[x] << " ";
+    	return printArray(a,x+1,y);
+	}
+}
+
+int main()
+{
+	array<int,10>a={0,1,2,3,4,5,6,7,8,9};
+	int x = 0;
+	int y = a.size()-1;
+
+	printArray(a,x,y);
+	return 0;
+ }
+
+/*
+FileName : T7_31.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <string>
+using namespace std;
+//�����ӡ�ַ���
+void stringReverse(string str,int x)
+{
+	if(x == 0)
+	cout << str[0];
+	else
+	{
+		cout << str[x]��
+		return stringReverse(str,x-1);
+	}
+}
+
+int main()
+{
+	string str;
+	cin >> str;
+	int x = str.size()-1;
+
+	stringReverse(str,x);
+	return 0;
+}
+
+/*
+FileName : T7_32.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include <iostream>
+#include <array>
+#include <algorithm>
+using namespace std;
+//�ݹ���Сֵ��������һ�����е���Сֵ
+int recursiveMinimum(array<int,9999>a,int x,int y)
+{
+   if(x+1 == y)
+   return min(a[x],a[y]);
+   else
+   return min(a[x],recursiveMinimum(a,x + 1,y));
+}
+
+int main()
+{
+	//��¼�����һ������
+	array<int,9999>a;
+    int i,n;
+    for( i = 0;1;i++)
+    {
+    	cin >> n;
+    	if(n == -1)
+    	break;
+    	a[i] = n;
+	}
+
+	cout << recursiveMinimum(a,0,i-1);
+	return 0;
+}
+
+/*
+FileName : T7_33.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+
+#include <iostream>
+using namespace std;
+
+char ch[12][12] =
+{
+	{'#','#','#','#','#','#','#','#','#','#','#','#'},
+	{'#','.','.','.','#','#','.','.','.','.','.','#'},
+	{'.','.','#','.','#','#','.','#','#','#','.','#'},
+	{'#','#','#','.','#','#','.','.','.','#','.','#'},
+	{'#','.','.','.','.','#','#','#','.','#','.','.'},
+	{'#','#','#','#','.','#','.','#','.','#','.','#'},
+	{'#','.','.','#','.','#','.','#','.','#','.','#'},
+	{'#','#','.','#','.','#','.','#','.','#','.','#'},
+	{'#','.','.','.','.','.','.','.','.','#','.','#'},
+	{'#','#','#','#','#','#','.','#','#','#','.','#'},
+	{'#','.','.','.','.','.','.','#','.','.','.','#'},
+	{'#','#','#','#','#','#','#','#','#','#','#','#'}
+};
+//��ʾx�ĵ�ǰ�ƶ�״��
+void disp(int m,int n)
+{
+	cout << endl;
+	for(int i=0;i<12;i++)
+	{
+		for(int j=0;j<12;j++)
+		{
+			if(i==m&&j==n){
+				cout << "x" << " ";
+			}
+			else
+			{
+				cout << ch[i][j] << " ";
+			}
+		}
+		cout << endl;
+	}
+}
+//�ݹ麯���ҵ��Թ�����
+void mazeTraverse(int d,int first=0,int m = 2 ,int n = 0 )
+{
+	//ÿ���ƶ���ʾ�Թ���x��λ��
+	disp(m,n);
+
+	//�����ǳ�ʼ̽Ѱ�����ж��Ƿ񵽴��Թ��߽�
+	if(!first&&(m==0||m==11||n==0||n==11))
+			return;
+
+	//������ǰ�ߣ���������ǽ�����򲻱�
+	// ������ǰ�ߣ�������ûǽ����ʱ��ǰ�ߣ���������ת
+	//�����ߣ���ת
+	switch(d)
+	{
+		case 0:	//����
+			if(ch[m-1][n]=='.'&&ch[m-1][n+1]=='#')   //��������ֱ��
+			{
+				mazeTraverse(d,0,m-1,n);
+				return;
+			}
+			//���������ߣ�������֮������ûǽ
+			else if(ch[m-1][n]=='.'&&ch[m-1][n+1]!='#')
+			{
+				mazeTraverse(3,0,m-1,n);
+				return;
+			}
+			// �����ߣ�����ת
+			else
+				mazeTraverse(2,0,m,n);
+			break;
+		case 1: //��������
+			//��������ֱ��
+			if(ch[m+1][n]=='.'&&ch[m+1][n-1]=='#')
+			{
+				mazeTraverse(d,0,m+1,n);
+				return;
+			}
+			//���������ߵ�����ûǽ������ת
+			else if(ch[m+1][n]=='.'&&ch[m+1][n-1]!='#')
+			{
+				mazeTraverse(2,0,m+1,n);
+				return;
+			}
+			// �����ߣ�����ת
+			else
+				mazeTraverse(3,0,m,n);
+			break;
+		case 2: //����
+			//��������ֱ��
+			if(ch[m][n-1]=='.'&&ch[m-1][n-1]=='#')
+			{
+				mazeTraverse(d,0,m,n-1);
+				return;
+			}
+			//���������ߵ�����ûǽ������ת
+			else if(ch[m][n-1]=='.'&&ch[m-1][n-1]!='#')
+			{
+				mazeTraverse(0,0,m,n-1);
+				return;
+			}
+			// �����ߣ�����ת
+			else
+				mazeTraverse(1,0,m,n);
+			break;
+		case 3: //����
+			//��������ֱ��
+			if(ch[m][n+1]=='.'&&ch[m+1][n+1]=='#')
+			{
+				mazeTraverse(d,0,m,n+1);
+				return;
+			}
+			//���������ߵ�����ûǽ������ת
+			else if(ch[m][n+1]=='.'&&ch[m+1][n+1]!='#')
+			{
+				mazeTraverse(1,0,m,n+1);
+				return;
+			}
+			// �����ߣ�����ת
+			else
+				mazeTraverse(0,0,m,n);
+			break;
+	}
+}
+
+int main()
+{
+	mazeTraverse(3,1,2,0);
+	return 0;
+}
+
+
+/*
+FileName : T7_34.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+
+#include <iostream>
+#include <ctime>
+using namespace std;
+//12*12���ȵ��Թ�
+static const int L=12;
+//�ֱ��ʾǽ��·
+static const int ROUTE=0;
+static const int WALL=1;
+
+void CreateMaze(int **maze,int x1,int y1,int x2,int y2)
+{
+    //�����ж��Ƿ��ܼ����ָ�
+    if(x2-x1<2||y2-y1<2)
+	{
+        return ;
+    }
+
+    //���ȡ��
+    int x=x1+1+rand()%(x2-x1-1);
+    int y=y1+1+rand()%(y2-y1-1);
+
+    //��ǽ
+    for(int i=x1;i<=x2;i++)
+	maze[i][y]=WALL;
+    for(int i=y1;i<=y2;i++)
+	maze[x][i]=WALL;
+
+    //�ݹ�ʮ�ַָ��������������
+    CreateMaze(maze,x1,y1,x-1,y-1);
+    CreateMaze(maze, x+1, y+1, x2, y2);
+    CreateMaze(maze,x+1,y1,x2,y-1);
+    CreateMaze(maze, x1, y+1, x-1, y2);
+
+    //���ȡ���е�����ǽ
+    int r[4] = {0};
+    r[rand()%4] = 1;
+
+    //��ǽ�����ȡ�㿪��
+    for(int i=0;i<4;i++)
+	{
+        if(r[i] == 0)
+		{
+            int rx=x;
+            int ry=y;
+            switch (i)
+			{
+                case 0:
+                    //�жϸ�λ���Ƿ���ȷ����ͨ�������������ж����ݣ���������λ�����ֻ������ǽ������һ��
+                    do{
+                        rx=x1+rand()%(x-x1);
+                    }while(maze[rx-1][ry]+maze[rx+1][ry]+maze[rx][ry-1]+maze[rx][ry+1]>2*WALL);
+                    break;
+                case 1:
+                    do{
+                        ry=y+1+rand()%(y2-y);
+                    }while(maze[rx-1][ry]+maze[rx+1][ry]+maze[rx][ry-1]+maze[rx][ry+1]>2*WALL);
+                    break;
+                case 2:
+                    do{
+                        rx=x+1+rand()%(x2-x);
+                    }while(maze[rx-1][ry]+maze[rx+1][ry]+maze[rx][ry-1]+maze[rx][ry+1]>2*WALL);
+                    break;
+                case 3:
+                    do{
+                        ry=y1+rand()%(y-y1);
+                    }while(maze[rx-1][ry]+maze[rx+1][ry]+maze[rx][ry-1]+maze[rx][ry+1]>2*WALL);
+                    break;
+                default:
+                    break;
+            }
+            maze[rx][ry]=ROUTE;
+        }
+    }
+}
+
+int main()
+{
+    srand((unsigned)time(NULL));
+
+    int **Maze=(int**)malloc(L*sizeof(int*));
+    for(int i=0;i<L;i++)
+	{
+        Maze[i]=(int*)calloc(L,sizeof(int));
+    }
+
+    //���һȦΪǽ
+    for(int i=0;i<L;i++)
+	{
+        Maze[0][i]=WALL;
+        Maze[i][0]=WALL;
+        Maze[L-1][i]=WALL;
+        Maze[i][L-1]=WALL;
+    }
+
+    //�����Թ�
+    CreateMaze(Maze, 1,1, L-2, L-2);
+
+    //���ó���
+    Maze[1][0]=ROUTE;
+    Maze[L-2][L-1]=ROUTE;
+    char ch[12][12];
+    //���Թ�
+    for(int i=0;i<L;i++)
+	{
+        for(int j=0;j<L;j++)
+		{
+            if(Maze[i][j]==WALL)
+			{
+                ch[i][j] = '#';
+            }
+			else
+			{
+                ch[i][j] = '.';
+            }
+        }
+    }
+
+    for(int i = 0;i<L;i++)
+    {
+    	for(int j = 0;j<L;j++)
+    	{
+    		cout << ch[i][j] << " ";
+		}
+		cout << endl;
+	}
+
+    for(int i=0;i<L;i++)
+	free(Maze[i]);
+    free(Maze);
+
+    return 0;
+}
+
+
+/*
+FileName : T7_35.cpp
+Author   : Wangyou
+E-mail   : 2590666971@qq.com
+Date     : Apr 29th,2022
+College  : School of Computer Science and Information Engineering
+Function : Just foe the homework
+
+*/
+#include<iostream>
+#include<array>
+using namespace std;
+
+int main()
+{
+	int n = 0, i = 0, u;
+	float a, b, c, d, e, max = 0, min = 10;
+	float f[5] = { 0 };
+	array<int, 5 >topics = { 1,2,3,4,5 };
+	array<array<int, 10>, 5> responses = { 0 };
+	for (; n != 4 || i != 9;)
+	{
+		n = 0;
+		cout << "����������������۴��" << endl;
+		cin >> u;
+		cout << endl;
+		responses[n][i] = u;
+		n++;
+		cout << "����Ի����������۴��" << endl;
+		cin >> u;
+		cout << endl;
+		responses[n][i] = u;
+		n++;
+		cout << "�������ʳ����������۴��" << endl;
+		cin >> u;
+		cout << endl;
+		responses[n][i] = u;
+		n++;
+		cout << "������г�����������۴��" << endl;
+		cin >> u;
+		cout << endl;
+		responses[n][i] = u;
+		n++;
+		cout << "����Խ�������������۴��" << endl;
+		cin >> u;
+		cout << endl;
+		responses[n][i] = u;
+		i++;
+	}
+
+	int a1[11] = {0};
+	int a2[11] = {0};
+	int a3[11] = {0};
+	int a4[11] = {0};
+	int a5[11] = {0};
+		for(int k = 0;k<10;k++)
+		{
+			for(int p = 1;p<=10;p++)
+			{
+				if(responses[0][k] == p)
+				a1[p]++;
+			}
+		}
+			for(int k = 0;k<10;k++)
+		{
+			for(int p = 1;p<=10;p++)
+			{
+				if(responses[1][k] == p)
+				a2[p]++;
+			}
+		}
+			for(int k = 0;k<10;k++)
+		{
+			for(int p = 1;p<=10;p++)
+			{
+				if(responses[2][k] == p)
+				a3[p]++;
+			}
+		}
+			for(int k = 0;k<10;k++)
+		{
+			for(int p = 1;p<=10;p++)
+			{
+				if(responses[3][k] == p)
+				a4[p]++;
+			}
+		}
+			for(int k = 0;k<10;k++)
+		{
+			for(int p = 1;p<=10;p++)
+			{
+				if(responses[4][k] == p)
+				a5[p]++;
+			}
+		}
+
+	cout << "��������" << "\t" << "1 2 3 4 5 6 7 8 9 10" << endl;
+	for (a = 0, i = 0; i < 10; i++)
+	{
+		a += responses[0][i];
+	}
+	a /= 10;
+	cout << "��������" << "\t";
+	for (i = 1; i <= 10; i++)
+	{
+		cout << a1[i] << " ";
+	}
+	cout << "\t" << "ƽ����Ϊ��" << a << endl;
+
+	for (b = 0, i = 0; i < 10; i++)
+	{
+		b += responses[1][i];
+	}
+	b /= 10;
+	cout << "��������" << "\t";
+	for (i = 1; i <= 10; i++)
+	{
+		cout << a2[i] << " ";
+	}
+	cout << "\t" << "ƽ����Ϊ��" << b << endl;
+
+	for (c = 0, i = 0; i < 10; i++)
+	{
+		c += responses[2][i];
+	}
+	c /= 10;
+	cout << "��ʳ����" << "\t";
+	for (i = 1; i <= 10; i++)
+	{
+		cout << a3[i] << " ";
+	}
+	cout << "\t" << "ƽ����Ϊ��" << c << endl;
+
+	for (d = 0, i = 0; i < 10; i++)
+	{
+		d += responses[3][i];
+	}
+	d /= 10;
+	cout << "�г�����" << "\t";
+	for (i = 1; i <= 10; i++)
+	{
+		cout << a4[i] << " ";
+	}
+	cout << "\t" << "ƽ����Ϊ��" << d << endl;
+
+	for (e = 0, i = 0; i < 10; i++)
+	{
+		e += responses[4][i];
+	}
+	e /= 10;
+	cout << "��������" << "\t";
+	for (i = 1; i <= 10; i++)
+	{
+		cout << a5[i] << " ";
+	}
+	cout << "\t" << "ƽ����Ϊ��" << d << endl;
+
+	f[0] = a; f[1] = b; f[2] = c; f[3] = d; f[4] = e;
+	for (i = 0; i < 5; i++)
+	{
+		if (f[i] > max)
+		{
+			max = f[i];
+		}
+	}
+	if (max == f[0])
+		cout << "���������ܷ����Ϊ:" << f[0]*10;
+	else if (max == f[1])
+		cout << "���������ܷ����Ϊ:" << f[1]*10;
+	else if (max == f[2])
+		cout << "��ʳ�����ܷ����Ϊ:" << f[2]*10;
+	else if (max == f[3])
+		cout << "�г������ܷ����Ϊ:" << f[3]*10;
+	else if (max == f[4])
+		cout << "���������ܷ����Ϊ:" << f[4]*10;
+	for (i = 0; i < 5; i++)
+	{
+		if (f[i] < min)
+		{
+			min = f[i];
+		}
+	}
+	if (min == f[0])
+		cout << "���������ܷ����Ϊ:" << f[0]*10;
+	else if (min == f[1])
+		cout << "���������ܷ����Ϊ:" << f[1]*10;
+	else if (min == f[2])
+		cout << "��ʳ�����ܷ����Ϊ:" << f[2]*10;
+	else if (min == f[3])
+		cout << "�г������ܷ����Ϊ:" << f[3]*10;
+	else if (min == f[4])
+		cout << "���������ܷ����Ϊ:" << f[4]*10;
+	return 0;
+}
+
